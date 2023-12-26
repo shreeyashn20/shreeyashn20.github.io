@@ -1,0 +1,15 @@
+# Shreeyash Nitin Malode
+
+## Doctoral Candidate at Indian Institute of Technology, Kanpur
+
+[shreeyashn20@iitk.ac.in](mailto:shreeyashn20@iitk.ac.in)
+
+[shreeyashn20.github.io](https://shreeyashn20.github.io)
+
+# GitHub Projects
+
+- [Renewable Energy Capacity Analysis of India - ANOVA test](https://github.com/shreeyashn20/ANOVA-test-for-renewable-capacity)
+- [Japan Environmentally Extended Input-Output Model](https://github.com/shreeyashn20/Japan-Environmentally-Extended-Input-Output-Model)
+- [Probit-Logit Model Analysis](https://github.com/shreeyashn20/Probit-Logit-Model)
+- [Panel Data Analysis - Grunfeld Investment Data](https://github.com/shreeyashn20/PANEL-DATA-ANALYSIS-Grunfeld-Investment-Data)
+- [Multiple Linear Regression - Combined Cycle Power Plant Data](https://github.com/shreeyashn20/Multiple-Linear-Regression---Combined-Cycle-Power-Plant)
