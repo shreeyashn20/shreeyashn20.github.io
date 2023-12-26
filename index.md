@@ -1,12 +1,11 @@
 # Shreeyash Nitin Malode
-
-## Doctoral Candidate at Indian Institute of Technology, Kanpur
-
+## About
+### Doctoral Candidate at Indian Institute of Technology, Kanpur
+### Contact Details
 [shreeyashn20@iitk.ac.in](mailto:shreeyashn20@iitk.ac.in)
-
 [shreeyashn20.github.io](https://shreeyashn20.github.io)
 
-# GitHub Projects
+## GitHub Projects
 
 - [Renewable Energy Capacity Analysis of India - ANOVA test](https://github.com/shreeyashn20/ANOVA-test-for-renewable-capacity)
 - [Japan Environmentally Extended Input-Output Model](https://github.com/shreeyashn20/Japan-Environmentally-Extended-Input-Output-Model)
