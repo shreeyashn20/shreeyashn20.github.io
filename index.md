@@ -7,6 +7,7 @@
 
 ## GitHub Projects
 
+- [Evolutionary Game Model - Simple Harvest and Protect](https://github.com/shreeyashn20/Evolutionary-Game-Model)
 - [Renewable Energy Capacity Analysis of India - ANOVA test](https://github.com/shreeyashn20/ANOVA-test-for-renewable-capacity)
 - [Japan Environmentally Extended Input-Output Model](https://github.com/shreeyashn20/Japan-Environmentally-Extended-Input-Output-Model)
 - [Probit-Logit Model Analysis](https://github.com/shreeyashn20/Probit-Logit-Model)
