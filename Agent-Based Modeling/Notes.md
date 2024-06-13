@@ -10,7 +10,7 @@ Model are abstract of real-world.
 
 Individual elements with properties
 
-### ABM 
+### ABM
 
 interaction between agents and environment interactions
 
