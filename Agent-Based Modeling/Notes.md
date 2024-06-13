@@ -2,13 +2,17 @@
 
 ## What are model?
 
-Model are abstract of real-world
+Model are abstract of real-world.
 
 ## What are ABM?
 
 ### Agent
 
-individual elements with properties \### ABM interaction between agents and environment interactions
+Individual elements with properties
+
+### ABM 
+
+interaction between agents and environment interactions
 
 ## Toolkits
 
@@ -35,3 +39,21 @@ With ABM, we can visual and characterize dynamic behavior of an agent which cann
 Small change tips other agent to change their behavior.
 
 > Note: ABM requires learning about existing models to build your own great model.
+
+## The Social Network Model
+
+OBABM.org and NetLogo website to refer models.
+
+## The Spatial Model
+
+Redfish Group
+
+## Complex Systems, Emergence and Feedbacks
+
+Complex Systems: Composed of emergence outcome and feedback interaction
+
+Emergence: New phenomena - sum of all the parts
+
+Feedback: effect of emergent
+
+> Not a perfect prediction
