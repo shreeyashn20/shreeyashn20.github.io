@@ -57,3 +57,29 @@ Emergence: New phenomena - sum of all the parts
 Feedback: effect of emergent
 
 > Not a perfect prediction
+
+## Representation
+
+Why? Problem not solved before, New Questions, Better Results
+
+Agents connected such that they are difficult to follow
+
+## Third Way of Doing Science
+
+Induction - Data to General theory
+
+Deduction - First principles to General theory
+
+Above is for Maths, Below for ABM
+
+Generative - Generated data vs Real world data
+
+This lead to integrative understand and differential understanding
+
+## When to use ABM?
+
+Medium Number - Too less number - game theory ; too many agents - statistics
+
+Heterogeneity - Difference between agents; Game theory - Homogenous
+
+Complex but Local Interaction - Interact differently
