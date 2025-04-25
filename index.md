@@ -1,4 +1,6 @@
-# Shreeyash Nitin Malode
+# Mr. Shreeyash Nitin Malode
+
+
 
 ## About
 
@@ -6,7 +8,7 @@
 
 ### Contact Details
 
-[shreeyashn20\@iitk.ac.in](mailto:shreeyashn20@iitk.ac.in) [shreeyashn20.github.io](https://shreeyashn20.github.io)
+[shreeyashn20\@iitk.ac.in](mailto:shreeyashn20@iitk.ac.in); [shreeyashn20.github.io](https://shreeyashn20.github.io)
 
 ## Notes
 
