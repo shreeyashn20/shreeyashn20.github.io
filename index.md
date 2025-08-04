@@ -4,8 +4,6 @@
 
 ---
 
-</div>
-
 <div align="center">
 
 [![Email](https://img.shields.io/badge/Email-shreeyashmalode@gmail.com-blue?style=for-the-badge&logo=gmail)](mailto:shreeyashmalode@gmail.com)
