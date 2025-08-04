@@ -1,16 +1,6 @@
 # **Shreeyash Nitin Malode**
 
-**Doctoral Candidate | Emissions Trading System | Energy-Climate Policy Modeler | Integrated Assessment Researcher**
-
----
-
-<div align="center">
-
-[![GitHub](https://img.shields.io/badge/GitHub-shreeyashn20-181717?style=for-the-badge&logo=github)](https://github.com/shreeyashn20)
-[![ORCID](https://img.shields.io/badge/ORCID-0000--0001--9571--0424-A6CE39?style=for-the-badge&logo=orcid)](https://orcid.org/0000-0001-9571-0424)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-shreeyashmalode-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/shreeyashmalode/)
-
-</div>
+Doctoral Candidate | Emissions Trading System | Energy-Climate Policy Modeler | Integrated Assessment Researcher
 
 ---
 
