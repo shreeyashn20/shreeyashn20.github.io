@@ -2,6 +2,8 @@
 
 **Doctoral Candidate | Emissions Trading System | Energy-Climate Policy Modeler | Integrated Assessment Researcher**
 
+---
+
 </div>
 
 <div align="center">
