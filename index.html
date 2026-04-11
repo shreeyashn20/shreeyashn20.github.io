@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shreeyash Nitin Malode - Academic Profile</title>
+    
+    <!-- Google Fonts for Academic Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            /* Academic Journal Color Palette */
+            --primary-color: #9e1b1e; /* Deep Journal Red */
+            --text-main: #222222;
+            --text-muted: #555555;
+            --bg-color: #f7f9fa;
+            --paper-bg: #ffffff;
+            --border-color: #e0e0e0;
+            --link-color: #00509e;
+            --link-hover: #9e1b1e;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: var(--link-color);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--link-hover);
+            text-decoration: underline;
+        }
+
+        /* Container & Layout */
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            background: var(--paper-bg);
+            padding: 60px 80px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+            border-top: 6px solid var(--primary-color);
+        }
+
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-family: 'Lora', serif;
+            font-weight: 600;
+        }
+
+        h1 {
+            font-size: 2.4rem;
+            color: var(--text-main);
+            margin-bottom: 5px;
+            letter-spacing: -0.5px;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 1.15rem;
+            color: var(--text-main);
+            margin-bottom: 4px;
+        }
+
+        h4 {
+            font-size: 1.05rem;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        /* Header Section */
+        header {
+            margin-bottom: 40px;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .download-btn {
+            background-color: var(--primary-color);
+            color: white !important;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .download-btn:hover {
+            background-color: #7a1517;
+            text-decoration: none;
+        }
+
+        .title-roles {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+            font-family: 'Lora', serif;
+            font-style: italic;
+        }
+
+        .research-area {
+            font-weight: 500;
+            margin-bottom: 20px;
+            background: #f9f2f2;
+            padding: 10px 15px;
+            border-left: 3px solid var(--primary-color);
+            font-size: 0.95rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px 25px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+        }
+
+        .contact-info a {
+            color: var(--text-muted);
+        }
+        .contact-info a:hover {
+            color: var(--primary-color);
+        }
+        .contact-info i {
+            margin-right: 5px;
+            color: var(--primary-color);
+        }
+
+        /* Entry Elements (Education, Experience) */
+        .entry {
+            margin-bottom: 25px;
+        }
+
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+
+        .entry-date {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        .entry-subtitle {
+            font-style: italic;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+
+        .entry-details {
+            padding-left: 20px;
+        }
+
+        ul {
+            list-style-position: outside;
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        /* Publications & Presentations List */
+        .academic-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .academic-list li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        .academic-list li::before {
+            content: "•";
+            color: var(--primary-color);
+            font-weight: bold;
+            position: absolute;
+            left: 5px;
+            top: 0;
+        }
+
+        .publication-title {
+            font-style: italic;
+        }
+
+        .highlight-badge {
+            background-color: #f1e0e0;
+            color: var(--primary-color);
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-left: 5px;
+        }
+
+        /* Skills Grid */
+        .skills-section {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+
+        .skill-group strong {
+            color: var(--text-main);
+        }
+
+        /* References Grid */
+        .references-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .reference-card h3 {
+            margin-bottom: 2px;
+        }
+
+        .reference-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Print Optimization */
+        @media print {
+            body {
+                background-color: #fff;
+            }
+            .container {
+                box-shadow: none;
+                margin: 0;
+                padding: 0;
+                border-top: none;
+            }
+            .download-btn {
+                display: none;
+            }
+            h2 {
+                page-break-after: avoid;
+            }
+            .entry {
+                page-break-inside: avoid;
+            }
+        }
+
+        /* Mobile Optimization */
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+                margin: 0;
+            }
+            .header-top {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .entry-header {
+                flex-direction: column;
+            }
+            .references-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="header-top">
+            <div>
+                <h1>Shreeyash Nitin Malode</h1>
+            </div>
+            <a href="https://github.com/shreeyashn20/shreeyashn20/blob/main/Shreeyash_Nitin_Malode_CV_Nov_25.pdf" class="download-btn" target="_blank">
+                <i class="fas fa-file-pdf"></i> Download CV
+            </a>
+        </div>
+
+        <div class="title-roles">
+            Doctoral Candidate - Department of Management Sciences, Indian Institute of Technology Kanpur (IITK), India<br>
+            Chapter Scientist - Intergovernmental Panel on Climate Change (IPCC)
+        </div>
+
+        <div class="research-area">
+            <strong>Research Area:</strong> Emissions Trading, Energy-Climate Policy Modelling, and Integrated Assessment Modelling
+        </div>
+
+        <div class="contact-info">
+            <span><i class="fas fa-envelope"></i> shreeyashmalode@gmail.com</span>
+            <span><i class="fas fa-university"></i> shreeyashn20@iitk.ac.in</span>
+            <span><i class="fas fa-mobile-alt"></i> +91 9545122299</span>
+        </div>
+        <div class="contact-info">
+            <a href="https://www.linkedin.com/in/shreeyashmalode/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://github.com/shreeyashn20" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://orcid.org/0000-001-9571-0424" target="_blank"><i class="fab fa-orcid"></i> ORCID</a>
+            <a href="https://scholar.google.com/citations?user=WQcqZIoAAAAJ&hl=en" target="_blank"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
+        </div>
+    </header>
+
+    <section>
+        <h2>Education</h2>
+
+        <div class="entry">
+            <div class="entry-header">
+                <h3>Indian Institute of Technology Kanpur, Kanpur, India</h3>
+                <span class="entry-date">Dec. 2020 – Ongoing</span>
+            </div>
+            <div class="entry-subtitle">Autonomous Public Research University</div>
+            <p><strong>Doctor of Philosophy in Management; CGPA: 7.60/10</strong></p>
+            <ul>
+                <li>Tentative Thesis Title: Essays on Emissions Trading System for India</li>
+            </ul>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <h3>Tata Institute of Social Sciences, Mumbai, India</h3>
+                <span class="entry-date">May. 2018 – May. 2020</span>
+            </div>
+            <div class="entry-subtitle">Autonomous Public Research University</div>
+            <p><strong>Master of Science in Regulatory Governance; CGPA: 7.70/10</strong></p>
+            <ul>
+                <li>Dissertation Title: <a href="https://zenodo.org/records/14592494" target="_blank">Impact of electricity tariff on end-consumers</a></li>
+            </ul>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <h3>National Power Training Institute, Nagpur, India</h3>
+                <span class="entry-date">June. 2013 – June. 2017</span>
+            </div>
+            <div class="entry-subtitle">Affiliated to R.T.M. Nagpur University</div>
+            <p><strong>Bachelor of Engineering in Power Engineering; CGPA: 8.81/10</strong></p>
+            <ul>
+                <li>Project Title: <a href="https://zenodo.org/records/13242340" target="_blank">Computational Fluid Dynamic Analysis of ES Precipitator</a></li>
+            </ul>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <h3>Shivaji Science College, Warora, India</h3>
+                <span class="entry-date">Feb. 2012 – Feb. 2013</span>
+            </div>
+            <div class="entry-subtitle">Affiliated to Maharashtra State Board</div>
+            <p><strong>Higher Secondary Certificate (Grade: 10+2); Percentage: 82.00</strong></p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Publications</h2>
+        <ul class="academic-list">
+            <li>
+                <strong>Malode, S.N., & Singh, A., (2025).</strong> Navigating India's Emission Trading System: An Analysis of Policy Evolution, Implementation Imperatives, and Critical Review for Energy Sustainability Pathway. <span class="publication-title">Energy for Sustainable Development 88 (2025): 101822</span>. <a href="https://doi.org/10.1016/j.esd.2025.101822" target="_blank">DOI: 10.1016/j.esd.2025.101822</a>
+            </li>
+            <li>
+                <strong>Malode, S.N., & Singh, A., (2025).</strong> Leveraging Policy for Sustainability: Assessing the Impact of Indian Carbon Market on Thermal Power LCOE, in Leal Filho, et. al (eds), Energy for Sustainable Development:-Capitalising on the Transformative Potential of Energy to Promote Economic Growth and Improve Livelihoods, World Sustainability Series, Springer, Cham. <a href="https://link.springer.com/book/9783032040701" target="_blank">Link</a> <span class="highlight-badge">Book Chapter - In Press</span>
+            </li>
+            <li>
+                <strong>Singh, A., Gupta, G., Shivhare, M., Malode, S. N., Sangwan, V., Sharma, M., & Khare, R., (2025).</strong> Risk and Hedging Avenues for Power Market Participants: A Novel Framework and Application to India, <span class="publication-title">The Electricity Journal 38 (2025): 107517</span>. <a href="https://doi.org/10.1016/j.tej.2025.107517" target="_blank">DOI: 10.1016/j.tej.2025.107517</a>
+            </li>
+            <li>
+                <strong>Malode, S. N. (2025).</strong> Sectoral emissions trading in national energy systems model: An application to Indian cement and steel sectors using MESSAGEix modelling framework, <span class="publication-title">IIASA YSSP Report</span>, IIASA, Laxenburg, Austria. <span class="highlight-badge">Limited Peer Review - Embargo</span>
+            </li>
+            <li>
+                <strong>Singh, A., Malode, S.N., & Verma, A. (2023).</strong> Developing Energy-Climate Policy Modelling for India: MESSAGEix, Centre for Energy Regulation (CER) and Energy Analytics Lab (EAL). <span class="highlight-badge">Limited Peer Review - Report Submitted to NITI Aayog, Government of India</span>
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Work Experience</h2>
+        <p style="margin-bottom: 20px; font-style: italic; color: var(--text-muted);">Total Professional Work Experience: 23 Months</p>
+
+        <div class="entry">
+            <div class="entry-header">
+                <h3>The Abdus Salam International Centre for Theoretical Physics, Trieste, Italy</h3>
+                <span class="entry-date">Jan 2024 - Ongoing</span>
+            </div>
+            <div class="entry-subtitle">Chapter Scientist (CS) - IPCC (Part-time with doctoral studies - Remote)</div>
+            <p><strong>Scientific Assessment Support: Seventh Assessment Report WGIII [Chapter 10: Industry]</strong></p>
+            <ul>
+                <li><strong>Fellowship Context:</strong> Selected for the competitive IPCC/ICTP/IAP CS Support Programme.</li>
+                <li><strong>Global Collaboration:</strong> Collaborate directly with Coordinating Lead Authors Dr. Christopher Bataille (Columbia/SFU) and Dr. Kumaran Kadirgama (UMPSA), and Lead Authors to provide critical technical support for analyzing literature on industrial decarbonization, energy efficiency, and mitigation pathways.</li>
+                <li><strong>Data Analysis and Reference Management:</strong> Execute rigorous verification of data and references using Python and Zotero, ensuring the report meets strict IPCC quality standards and referencing protocols.</li>
+            </ul>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <h3>International Institute for Applied Systems Analysis, Laxenburg, Austria</h3>
+                <span class="entry-date">Jun 2025 - Aug 2025</span>
+            </div>
+            <div class="entry-subtitle">Young Scientists Summer Program (Part-time with doctoral studies)</div>
+            <p><strong><a href="https://iiasa.ac.at/2025-yssp-participants" target="_blank">Integration of MESSAGEix Framework and Emission Trading System Modeling: Assessment of Indian Carbon Market Policy and 1.5°C Scenarios for Energy Transition</a></strong></p>
+            <ul>
+                <li><strong>Fellowship:</strong> Awarded Prof. Jyoti and Kirit Parikh Fellowship to participate at YSSP.</li>
+                <li><strong>Project Description:</strong> Developed novel framework of sectoral emissions trading within integrated assessment model. Applied the framework in the case of cement and steel industry in India. Presented findings in international conferences, and submitted YSSP report.</li>
+                <li><strong>YSSP Mentors:</strong> Dr. Setu Pelz, Dr. Siddharth Joshi and Dr. Shonali Pachauri</li>
+                <li><strong>Activities:</strong> 2025 YSSP Final Colloquium Proceedings Editor.</li>
+            </ul>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <h3>Centre for Energy Regulation, Indian Institute of Technology - Kanpur</h3>
+                <span class="entry-date">Apr 2022 - Dec 2022</span>
+            </div>
+            <div class="entry-subtitle">Senior Student Research Associate (Part-time with doctoral studies)</div>
+            <p><strong><a href="https://www.niti.gov.in/verticals/energy" target="_blank">Developing Energy-Climate Policy Modelling for India using MESSAGEix framework</a></strong></p>
+            <ul>
+                <li><strong>Project Description:</strong> Project Parties -- IIT Kanpur and NITI Aayog; India Energy Model -- 7 sectors; Dynamic Energy System Cost Minimization.</li>
+                <li><strong>Data Collection, Data Rectification and Data Verification:</strong> Extensive data analytics exercise on agriculture, transport, domestic, commercial, industry, coal, oil, natural gas and power sector data; Total Parameters 1860.</li>
+                <li><strong>Modelling Exercise and Post-processing:</strong> Developed Python code for carrying out modelling and reporting exercises. Validated mathematical formulation in GAMS code of MESSAGEix framework. Visualisation of model results in Python using matplotlib and MS Excel.</li>
+                <li><strong>Scenario Analysis and Reporting:</strong> Devised various scenarios incorporating INDC commitments and policy targets. Final report writing.</li>
+            </ul>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <h3>Centre for Energy Regulation, Indian Institute of Technology - Kanpur</h3>
+                <span class="entry-date">Aug 2020 - Jan 2021</span>
+            </div>
+            <div class="entry-subtitle">Project Associate (Full-time)</div>
+            <ul>
+                <li><strong>Regulatory Policy Research:</strong> Summarized draft acts, rules, policies and regulations from the power sector. Assisted Principal Investigator (PI) in critically analyzing and submitting policy comments to regulatory authorities. Contributed to CER's Quarterly Newsletter -- <strong><a href="https://cer.iitk.ac.in/newsletter" target="_blank">Regulatory Insights</a></strong>. Assisted PI in carrying out research in the power market for EAL's Quarterly Newsletter -- <strong><a href="https://eal.iitk.ac.in/newsletter.php" target="_blank">Power Chronicle</a></strong>.</li>
+                <li><strong><a href="https://cer.iitk.ac.in/rdb" target="_blank">Regulatory Data Dashboard</a>:</strong> Contributed in the development of the Regulatory Data Dashboard. Assisted PI in carrying out research related to <strong>Aggregate Revenue Requirement, Average Cost of Supply, Regulatory Norms for Electricity Tariff and Financial Performance of Distribution Companies</strong>.</li>
+                <li><strong><a href="https://cer.iitk.ac.in/events" target="_blank">Regulatory Manthan (RM)</a>:</strong> Contributed in organising CER's flagship event 1st and 2nd Regulatory Manthan. Assisted PI in research in the topic titled <strong><a href="https://cer.iitk.ac.in/RM/rm1" target="_blank">Developing a Multi-year Tariff (MYT) Framework</a></strong> and <strong><a href="https://cer.iitk.ac.in/RM/rm2" target="_blank">Relinquishment of Long-term CGS PPAs beyond Tenure</a></strong>.</li>
+            </ul>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <h3>Independent Consultancy</h3>
+                <span class="entry-date">Apr 2020 - Aug 2020</span>
+            </div>
+            <div class="entry-subtitle">Self-Employed (Full-time)</div>
+            <ul>
+                <li><strong>Client 1: Waatavaran CES Foundation, Mumbai, India (Apr - Jul 2020):</strong> Policy advocacy and outreach: Conducted community mobilization on social issues, primarily <strong>air pollution</strong>, <strong>biodiversity loss</strong> and <strong>forest rights</strong>.</li>
+                <li><strong>Client 2: Climate Risk Horizons, Bangalore, India (Jul - Aug 2020):</strong> Assessment of the <strong>financial performance</strong> of coal-based thermal power plants in India.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>International Conference & Workshop Presentations</h2>
+        <ul class="academic-list">
+            <li>
+                <strong>Malode, S. N., & Singh, A., (2025).</strong> Essays on Emissions Trading System for India: from the lens of sufficiency. <span class="publication-title">Sufficiency PhD Days, The World Sufficiency Lab, SciencesPo, Paris, France</span>. <span class="highlight-badge">Online Oral Presentation</span>
+            </li>
+            <li>
+                <strong>Malode, S. N., & Singh, A., (2025).</strong> Assessment of Indian Carbon Market's Role in the National Energy Transition. <span class="publication-title">6th International Conference on Clean and Green Energy Engineering (CGEE2025), University of Zagreb, Zagreb, Croatia</span>. <span class="highlight-badge">Oral Presentation</span>
+            </li>
+            <li>
+                <strong>Malode, S. N., Pelz, S., Joshi, S., Singh, A., & Pachauri, S., (2025).</strong> Sectoral Emissions Trading in National Energy System Model: An Application to Indian Cement and Steel Industry. <span class="publication-title">2025 YSSP Final Colloquium, International Institute of Applied System Analysis (IIASA), Laxenburg, Austria</span>. <span class="highlight-badge">Oral Presentation</span>
+            </li>
+            <li>
+                <strong>Malode, S. N., Pelz, S., Joshi, S., Singh, A., & Pachauri, S., (2025).</strong> Sectoral Emissions Trading in Integrated Assessment Model: Application to Indian Cement and Steel Sector using MESSAGEix Framework. <span class="publication-title">2025 Student Research Fest, Complexity Science Hub, Vienna, Austria</span>. <span class="highlight-badge">Oral Presentation</span>
+            </li>
+            <li>
+                <strong>Malode, S.N., & Singh, A., (2025).</strong> Tracking, Targeting, and Transforming: Quantifying and Closing the Emissions Gap with Integrated Assessment Models. <span class="publication-title">RE-CONNECT Workshop, PBL Netherlands Environmental Assessment Agency, Hague, Netherlands</span>. <a href="https://doi.org/10.5281/zenodo.15425813" target="_blank">Zenodo</a> <span class="highlight-badge">Online Oral Presentation</span>
+            </li>
+            <li>
+                <strong>Malode, S.N., & Singh, A., (2024).</strong> Setting Emission Cap on Thermal Power Sector for Indian Carbon Market: A Scenario Analysis using MESSAGEix Modelling Framework. <span class="publication-title">IIASA Summer School for Systems Modeling 2024, International Institute for Applied Systems Analysis (IIASA), Laxenburg, Austria</span>. <a href="https://doi.org/10.5281/zenodo.14039458" target="_blank">Zenodo</a> <span class="highlight-badge">Oral Presentation</span>
+            </li>
+            <li>
+                <strong>Malode, S.N., & Singh, A., (2024).</strong> The Energy Storage Requirement for Decarbonizing Indian Power Sector: Analysing Emission Cap Scenario through the MESSAGEix-Flextool. <span class="publication-title">Seventeenth IAMC Annual Meeting, Yonsei University, Seoul, South Korea</span>. <a href="https://doi.org/10.5281/zenodo.14039458" target="_blank">Zenodo</a> <span class="highlight-badge">Online Poster Presentation</span>
+            </li>
+            <li>
+                <strong>Malode, S.N., & Singh, A., (2024).</strong> Emission Cap Scenarios for Indian Power Sector using MESSAGEix Modelling Framework. <span class="publication-title">Next Generation Challenges in Energy-Climate Modelling Workshop 2024, University of Reading, Great Britain</span>. <a href="https://doi.org/10.5281/zenodo.13856830" target="_blank">Zenodo</a> <span class="highlight-badge">Online Poster Presentation</span>
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Internship Experience</h2>
+        <p style="margin-bottom: 20px; font-style: italic; color: var(--text-muted);">Total Internship Experience: 11 Months</p>
+        
+        <div class="entry">
+            <div class="entry-header">
+                <h3>RADICALi Pte Ltd, Singapore</h3>
+                <span class="entry-date">Nov 2019 - Aug 2020</span>
+            </div>
+            <div class="entry-subtitle">Intern - Regulatory Intelligence (Part-time and Remote)</div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <h3>National Institute of Public Finance and Policy, New Delhi, India</h3>
+                <span class="entry-date">Mar 2019 - June 2019</span>
+            </div>
+            <div class="entry-subtitle">Research Intern - Economics (Full-time)</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Technical & Professional Skills</h2>
+        <div class="skills-section">
+            <div class="skill-group">
+                <p><strong>Softwares/Languages:</strong> MS Excel, GAMS, Python (Libraries: pandas, GAMSPY, matplotlib), R, LaTeX</p>
+            </div>
+            <div class="skill-group">
+                <p><strong>Energy/Power System Models:</strong> IIASA's <a href="https://docs.messageix.org/en/latest/index.html" target="_blank">MESSAGEix Framework</a>, IRENA's <a href="https://www.irena.org/Energy-Transition/Planning/Flextool" target="_blank">FlexTool</a>, SEI's <a href="https://leap.sei.org/" target="_blank">LEAP</a>, <a href="https://iess2047.gov.in" target="_blank">IESS2047</a></p>
+            </div>
+            <div class="skill-group">
+                <p><strong>Quantitative & Qualitative Research Skills:</strong></p>
+                <ul>
+                    <li><strong>Operation Research</strong> (Linear and Mixed Integer Programming) specialization in Energy System Optimization, and <strong>Mathematical Modeling</strong></li>
+                    <li><strong>Data Analysis</strong> and <strong>Statistical Modeling</strong> using Regression [GitHub Repositories: <a href="https://github.com/shreeyashn20" target="_blank">github.com/shreeyashn20</a>]</li>
+                    <li><strong>Regulatory Impact Assessment</strong>, Policy Research and Analysis specialization in <strong>Energy and Climate Policies</strong></li>
+                    <li><strong>System Dynamics Modeling</strong>, Agent-Based Modeling, Game Theory</li>
+                    <li><strong>Communication:</strong> Academic & Report Writing, Public Presentation, Grant Writing, PowerPoint Presentation, Journal/Academic Writing, Copywriting and Legal Drafting</li>
+                    <li><strong>Research Design:</strong> Literature Review, Design Thinking, Exploratory Research, Survey, Focus Group Discussion</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Selected GitHub Repositories</h2>
+        <ul class="academic-list">
+            <li><a href="https://github.com/iiasa/message_ix/discussions/779#discussion-6065747" target="_blank">A Simplified Approach to Inputting Data into MESSAGEix without MS Excel</a> <span class="highlight-badge">Python</span></li>
+            <li><a href="https://github.com/shreeyashn20/West-Bengal-Cross-Subsidy-Cross-Subsidy-Surcharge" target="_blank">West Bengal Cross Subsidy and Cross Subsidy Surcharge</a> <span class="highlight-badge">Excel</span></li>
+            <li><a href="https://github.com/shreeyashn20/Multiple-Linear-Regression---Combined-Cycle-Power-Plant" target="_blank">Multiple Linear Regression for Combined Cycle Power Plant</a> <span class="highlight-badge">R</span></li>
+            <li><a href="https://github.com/shreeyashn20/PANEL-DATA-ANALYSIS-Grunfeld-Investment-Data" target="_blank">Panel Data Analysis of Grunfeld Investment Dataset for OLS, Entity and Time Fixed Effect Regression Models</a> <span class="highlight-badge">R</span></li>
+            <li><a href="https://github.com/shreeyashn20/Probit-Logit-Model" target="_blank">Binary Data Analysis of Women Employment Dataset for Probit and Logit model Regression Models</a> <span class="highlight-badge">R</span></li>
+            <li><a href="https://github.com/shreeyashn20/ANOVA-test-for-renewable-capacity" target="_blank">ANOVA test for renewable capacity</a> <span class="highlight-badge">R</span></li>
+            <li><a href="https://github.com/shreeyashn20/Japan-Environmentally-Extended-Input-Output-Model" target="_blank">Japan-Environmentally-Extended-Input-Output-Model</a> <span class="highlight-badge">GAMS</span></li>
+            <li><a href="https://github.com/shreeyashn20/Evolutionary-Game-Model" target="_blank">Evolutionary-Game-Model</a> <span class="highlight-badge">Matlab</span></li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Awards & Achievements</h2>
+        <ul class="academic-list">
+            <li>Selected for <a href="https://ms-researchhub.com/" target="_blank">MS Research Hub EU-Funded Scholarship program</a> for online participation at <a href="https://ms-researchhub.com/home/training/gem-training.html" target="_blank">General Equilibrium Model</a> - <em>MS Research Hub, Kassel, Germany</em></li>
+            <li>Awarded <a href="https://futurium.ec.europa.eu/en/re-connect/pages/about-re-connect" target="_blank">RE-CONNECT</a> grant for online poster presentation at <a href="https://www.iamconsortium.org/seventeenth-iamc-annual-meeting-2024/" target="_blank">17th Integrated Assessment Modelling Consortium Annual Meeting</a> - <em>RE-CONNECT Project, European Commission (EU) and IAMC Secreteriat</em></li>
+            <li>Participated in the <a href="https://iiasa.ac.at/capacity-development/summer-schools/summer-school-for-systems-modeling/summer-school-testimonials" target="_blank">2024 IIASA Summer School for System Modeling</a> on a full fee waiver - <em>International Institute for Applied Systems Analysis, Laxenburg, Austria [On-site]</em></li>
+            <li>Institute Assistantship for pursuing Ph.D. in Management - <em>IIT Kanpur</em></li>
+            <li>All India Rank 100 in Graduate Aptitude Test in Engineering (2021) for Sociology Stream - <em>IIT Bombay</em></li>
+            <li><a href="https://tiss.edu/uploads/files/Annual-Report-2019-2020.pdf" target="_blank">Institute Silver Medal for Second Best Student (M.Sc Regulatory Governance 2018-20)</a> - <em>TISS Mumbai</em></li>
+            <li>Institute Rank 1 in B.E. Power Engineering Final Year - <em>NPTI Nagpur</em></li>
+            <li>INSPIRE Scholarship 2013 by Department of Science and Technology - <em>Government of India</em></li>
+            <li>Merit-based Scholarship for Higher Education - <em>Maharashtra State Electricity Distribution Company Limited</em></li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Certifications & Workshops</h2>
+        <ul class="academic-list">
+            <li><strong>2024 Summer School for System Modeling [July, 2024]</strong> - <em>IIASA, Laxenburg, Austria [On-site]</em></li>
+            <li><strong>Electric Vehicle: Mobility meets the power system</strong> - <em>Florence School of Regulation, European Union Institute</em></li>
+            <li><strong>Model for Analysis of Energy Demand</strong> - <em>Climate Compatible Growth, U.K.</em></li>
+            <li><strong>Masterclass in ESG Reporting and Impact Measurement</strong> - <em>NIT Rourkela</em></li>
+            <li><strong>Stakeholder Consultation on Indian Carbon Market</strong> - <em>BEE and MoEFCC, Govt of India</em></li>
+            <li><strong>MESSAGEix Workshop [June, 2021 & 2025], MESSAGEix Community Meetings [2022-2024]</strong> - <em>IIASA</em></li>
+            <li><strong>Integrated Assessment of Air Pollution and GHG Mitigation in India using GAINS model</strong> - <em>TIFAC</em></li>
+            <li><strong>An Introduction to Climate Change: Science, Politics and Impact</strong> - <em>CSE</em></li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>References</h2>
+        <div class="references-grid">
+            <div class="reference-card">
+                <h3>Prof. Anoop Singh</h3>
+                <p>Professor, IIT Kanpur</p>
+                <p><a href="mailto:anoops@iitk.ac.in"><i class="fas fa-envelope"></i> anoops@iitk.ac.in</a></p>
+            </div>
+            <div class="reference-card">
+                <h3>Prof. Sachin Warghade</h3>
+                <p>Assistant Professor, TISS Mumbai</p>
+                <p><a href="mailto:sachin.warghade@tiss.ac.in"><i class="fas fa-envelope"></i> sachin.warghade@tiss.ac.in</a></p>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+</body>
+</html>
