@@ -1,10 +1,12 @@
 # Shreeyash Nitin Malode | [Download CV](https://github.com/shreeyashn20/shreeyashn20/blob/main/Shreeyash_Nitin_Malode_CV_Nov_25.pdf)
 
-Doctoral Candidate - Department of Management Sciences  
+Doctoral Candidate - Department of Management Sciences
 Indian Institute of Technology Kanpur (IITK), India  
+Chapter Scientist - Intergovernmental Panel on Climate Change (IPCC)
+
 Research Area: Emissions Trading, Energy-Climate Policy Modelling and Integrated Assessment Modelling
 
-<shreeyashmalode@gmail.com>  • <shreeyashn20@iitk.ac.in>
+shreeyashmalode[at]gmail[dot]com • shreeyashn20[at]iitk[dot]ac[dot]in • Mobile: +91 9545122299
 
 [LinkedIn](https://www.linkedin.com/in/shreeyashmalode/) • [GitHub](https://github.com/shreeyashn20) • [ORCID ID](https://orcid.org/0000-001-9571-0424) • [Google Scholar](https://scholar.google.com/citations?user=WQcqZIoAAAAJ&hl=en)
 
@@ -41,7 +43,7 @@ Research Area: Emissions Trading, Energy-Climate Policy Modelling and Integrated
 
 - **Malode, S.N., & Singh, A., (2025).** Navigating India's Emission Trading System: An Analysis of Policy Evolution, Implementation Imperatives, and Critical Review for Energy Sustainability Pathway. *Energy for Sustainable Development 88 (2025): 101822*. [DOI: 10.1016/j.esd.2025.101822](https://doi.org/10.1016/j.esd.2025.101822)
 - **Malode, S.N., & Singh, A., (2025).** Leveraging Policy for Sustainability: Assessing the Impact of Indian Carbon Market on Thermal Power LCOE, in Leal Filho, et. al (eds), Energy for Sustainable Development:-Capitalising on the Transformative Potential of Energy to Promote Economic Growth and Improve Livelihoods, World Sustainability Series, Springer, Cham, link - [https://link.springer.com/book/9783032040701](https://link.springer.com/book/9783032040701) **[Book Chapter - In Press]**.
-- **Singh, A., Gupta, G., Shivhare, M., Malode, S. N., Sangwan, V., Sharma, M., & Khare, R., (2025).** Identification of risk and hedging avenues for power market participants: A novel framework and application to India, *The Electricity Journal*. **[Under Revision]**.
+- **Singh, A., Gupta, G., Shivhare, M., Malode, S. N., Sangwan, V., Sharma, M., & Khare, R., (2025).** Risk and Hedging Avenues for Power Market Participants: A Novel Framework and Application to India, *The Electricity Journal 38 (2025): 107517*. [DOI: 10.1016/j.tej.2025.107517](https://doi.org/10.1016/j.tej.2025.107517)
 - **Malode, S. N. (2025).** Sectoral emissions trading in national energy systems model: An application to Indian cement and steel sectors using MESSAGEix modelling framework, *IIASA YSSP Report*, IIASA, Laxenburg, Austria. **[Limited Peer Review - Embargo]**.
 - **Singh, A., Malode, S.N., & Verma, A. (2023).** Developing Energy-Climate Policy Modelling for India: MESSAGEix, Centre for Energy Regulation (CER) and Energy Analytics Lab (EAL) **[Limited Peer Review - Report Submitted to NITI Aayog, Government of India, India]**.
 
@@ -49,7 +51,16 @@ Research Area: Emissions Trading, Energy-Climate Policy Modelling and Integrated
 
 ## **Work Experience**
 
-*Total Professional Work Experience: 21 Months*
+*Total Professional Work Experience: 23 Months*
+
+### **The Abdus Salam International Centre for Theoretical Physics, Trieste, Italy**
+*Chapter Scientist (CS) - IPCC (Part-time with doctoral studies - Remote)*
+*Jan 2024 - Ongoing (2 Months)*
+
+**Scientific Assessment Support: Seventh Assessment Report WGIII [Chapter 10: Industry]**
+- **Fellowship Context:** Selected for the competitive IPCC/ICTP/IAP CS Support Programme.
+- **Global Collaboration:** Collaborate directly with Coordinating Lead Authors Dr. Christopher Bataille (Columbia/SFU) and Dr. Kumaran Kadirgama (UMPSA), and Lead Authors to provide critical technical support for analyzing literature on industrial decarbonization, energy efficiency, and mitigation pathways.
+- **Data Analysis and Reference Management:** Execute rigorous verification of data and references using Python and Zotero, ensuring the report meets strict IPCC quality standards and referencing protocols.
 
 ### **International Institute for Applied Systems Analysis, Laxenburg, Austria**
 *Young Scientists Summer Program (Part-time with doctoral studies)*
@@ -126,7 +137,7 @@ Research Area: Emissions Trading, Energy-Climate Policy Modelling and Integrated
   - **Data Analysis** and **Statistical Modeling** using Regression [Github Repositories: [github.com/shreeyashn20](https://github.com/shreeyashn20)]
   - **Regulatory Impact Assessment**, Policy Research and Analysis specialization in **Energy and Climate Policies**
   - **System Dynamics Modeling**, Agent-Based Modeling, Game Theory
-  - **Report Writing**, PowerPoint Presentation, Journal/Academic Writing, Copywriting and Legal Drafting
+  - **Communication:** Academic & Report Writing, Public Presentation, Grant Writing, PowerPoint Presentation, Journal/Academic Writing, Copywriting and Legal Drafting
   - **Literature Review**, Design Thinking, Exploratory Research, Survey, Focus Group Discussion
 
 ---
@@ -170,3 +181,13 @@ Research Area: Emissions Trading, Energy-Climate Policy Modelling and Integrated
 - **An Introduction to Climate Change: Science, Politics and Impact** - *CSE*
 
 ---
+
+## **References**
+
+- **Prof. Anoop Singh**
+  Professor, IIT Kanpur
+  Email: anoops@iitk.ac.in
+
+- **Prof. Sachin Warghade**
+  Assistant Professor, TISS Mumbai
+  Email: sachin.warghade@tiss.ac.in
