@@ -87,7 +87,7 @@
 
         /* Sidebar Profile */
         .sidebar {
-            flex: 0 0 520px; /* INCREASED FROM 380px TO 420px */
+            flex: 0 0 420px;
             position: sticky;
             top: 40px;
             background: var(--paper-bg);
@@ -421,6 +421,17 @@
             top: 4px;
             font-size: 0.9rem;
         }
+        
+        .summary-text {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: var(--text-main);
+            background: var(--bg-color);
+            padding: 20px;
+            border-left: 4px solid var(--primary-color);
+            border-radius: 8px;
+        }
 
         .highlight-badge {
             display: inline-block;
@@ -553,14 +564,13 @@
 
         <h1>Shreeyash Nitin Malode</h1>
         <div class="title-roles">
-            <strong>Chapter Scientist - Intergovernmental Panel on Climate Change (IPCC)</strong><br><br>
-            Doctoral Candidate - Department of Management Sciences, 
-            Indian Institute of Technology Kanpur (IITK), Kanpur, India
-            
+            <strong>Chapter Scientist - IPCC</strong><br><br>
+            Doctoral Candidate - IIT Kanpur<br>
+            YSSP’25 Fellow - IIASA
         </div>
 
         <div class="research-area">
-            <strong>Research Area:</strong><br> Emissions Trading, Energy-Climate Policy Modelling, and Integrated Assessment Modelling.
+            <strong>Research Areas:</strong><br> Emissions Trading, Integrated Assessment and Energy-Climate Policy Modeling.
         </div>
 
         <!-- Masked Contacts -->
@@ -583,12 +593,16 @@
                     <i class="fas fa-lock"></i> Click to reveal Phone
                 </span>
             </li>
+            <li>
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Kanpur, Uttar Pradesh, India</span>
+            </li>
         </ul>
 
         <div class="social-links">
             <a href="https://www.linkedin.com/in/shreeyashmalode/" class="social-btn" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
             <a href="https://github.com/shreeyashn20" class="social-btn" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-            <a href="https://orcid.org/0000-001-9571-0424" class="social-btn" target="_blank"><i class="fab fa-orcid"></i> ORCID</a>
+            <a href="https://orcid.org/0000-0001-9571-0424" class="social-btn" target="_blank"><i class="fab fa-orcid"></i> ORCID</a>
             <a href="https://scholar.google.com/citations?user=WQcqZIoAAAAJ&hl=en" class="social-btn" target="_blank"><i class="fas fa-graduation-cap"></i> Scholar</a>
         </div>
 
@@ -597,15 +611,17 @@
         </a>
         
         <ul class="nav-menu">
-            <li><a href="#education" class="nav-link active">Education</a></li>
+            <li><a href="#about" class="nav-link active">About Me</a></li>
+            <li><a href="#education" class="nav-link">Education</a></li>
             <li><a href="#publications" class="nav-link">Publications</a></li>
             <li><a href="#experience" class="nav-link">Work Experience</a></li>
+            <li><a href="#teaching" class="nav-link">Teaching Assistantship</a></li>
             <li><a href="#presentations" class="nav-link">Presentations</a></li>
             <li><a href="#internships" class="nav-link">Internships</a></li>
             <li><a href="#skills" class="nav-link">Technical Skills</a></li>
             <li><a href="#repositories" class="nav-link">GitHub Repositories</a></li>
             <li><a href="#awards" class="nav-link">Awards & Certifications</a></li>
-            <li><a href="#invited-speaker" class="nav-link">Invited Speaker</a></li> <!-- New Menu Item -->
+            <li><a href="#invited-speaker" class="nav-link">Invited Speaker</a></li> 
             <li><a href="#references" class="nav-link">References</a></li>
         </ul>
     </aside>
@@ -613,6 +629,15 @@
     <!-- RIGHT MAIN CONTENT -->
     <main class="main-content">
         
+        <!-- About Me -->
+        <section id="about">
+            <h2><i class="fas fa-user-circle"></i> About Me</h2>
+            <div class="summary-text">
+                <p>You see <strong>"Emissions Trading"</strong> and <strong>"Energy-Climate Policy Modelling"</strong> on my profile, and yeah, that's a big part of what I do. But what that really means is I'm constantly digging into data, building models (lots of love for <strong>MESSAGEix!</strong>), and trying to make sense of how we can transition to a cleaner energy future.</p>
+                <p style="margin-top: 10px;">It's not just about the numbers, though. It's about understanding the real-world implications and finding pathways that are both <em>effective</em> and <em>fair</em>.</p>
+            </div>
+        </section>
+
         <!-- Education -->
         <section id="education">
             <h2><i class="fas fa-graduation-cap"></i> Education</h2>
@@ -620,10 +645,10 @@
                 <div class="entry">
                     <div class="entry-header">
                         <h3>Indian Institute of Technology Kanpur, Kanpur, India</h3>
-                        <span class="entry-date">Dec. 2020 – Ongoing</span>
+                        <span class="entry-date">Jan 2021 – Dec 2026</span>
                     </div>
                     <div class="entry-subtitle">Autonomous Public Research University</div>
-                    <p><strong>Doctor of Philosophy in Management; CGPA: 7.60/10</strong></p>
+                    <p><strong>Doctor of Philosophy - PhD, Management (Energy Economics); CGPA: 7.60/10</strong></p>
                     <ul class="custom-list" style="margin-top: 10px;">
                         <li><strong>Tentative Thesis Title:</strong> Essays on Emissions Trading System for India</li>
                     </ul>
@@ -632,10 +657,10 @@
                 <div class="entry">
                     <div class="entry-header">
                         <h3>Tata Institute of Social Sciences, Mumbai, India</h3>
-                        <span class="entry-date">May. 2018 – May. 2020</span>
+                        <span class="entry-date">May 2018 – May 2020</span>
                     </div>
                     <div class="entry-subtitle">Autonomous Public Research University</div>
-                    <p><strong>Master of Science in Regulatory Governance; CGPA: 7.70/10</strong></p>
+                    <p><strong>Master of Science (M.Sc.) in Regulatory Governance; CGPA: 7.70/10</strong></p>
                     <ul class="custom-list" style="margin-top: 10px;">
                         <li><strong>Dissertation Title:</strong> <a href="https://zenodo.org/records/14592494" target="_blank">Impact of electricity tariff on end-consumers</a></li>
                     </ul>
@@ -644,9 +669,9 @@
                 <div class="entry">
                     <div class="entry-header">
                         <h3>National Power Training Institute, Nagpur, India</h3>
-                        <span class="entry-date">June. 2013 – June. 2017</span>
+                        <span class="entry-date">Jun 2013 – Jun 2017</span>
                     </div>
-                    <div class="entry-subtitle">Affiliated to R.T.M. Nagpur University</div>
+                    <div class="entry-subtitle">Under Ministry of Power, Govt. of India (Affiliated to R.T.M. Nagpur University)</div>
                     <p><strong>Bachelor of Engineering in Power Engineering; CGPA: 8.81/10</strong></p>
                     <ul class="custom-list" style="margin-top: 10px;">
                         <li><strong>Project Title:</strong> <a href="https://zenodo.org/records/13242340" target="_blank">Computational Fluid Dynamic Analysis of ES Precipitator</a></li>
@@ -655,11 +680,20 @@
 
                 <div class="entry">
                     <div class="entry-header">
-                        <h3>Shivaji Science College, Warora, India</h3>
-                        <span class="entry-date">Feb. 2012 – Feb. 2013</span>
+                        <h3>Shiwaji Science College, Warora, India</h3>
+                        <span class="entry-date">Feb 2011 – Feb 2013</span>
                     </div>
                     <div class="entry-subtitle">Affiliated to Maharashtra State Board</div>
-                    <p><strong>Higher Secondary Certificate (Grade: 10+2); Percentage: 82.00</strong></p>
+                    <p><strong>Higher Secondary Certificate (Grade: 10+2), Science; Percentage: 82.00%</strong></p>
+                </div>
+
+                <div class="entry">
+                    <div class="entry-header">
+                        <h3>Noel School, Akola, India</h3>
+                        <span class="entry-date">Jun 2010 – Jun 2011</span>
+                    </div>
+                    <div class="entry-subtitle">Affiliated to Maharashtra State Board</div>
+                    <p><strong>Secondary School Certificate (10th), General Studies; Percentage: 86.36%</strong></p>
                 </div>
             </div>
         </section>
@@ -689,63 +723,64 @@
         <!-- Work Experience -->
         <section id="experience">
             <h2><i class="fas fa-briefcase"></i> Work Experience</h2>
-            <p style="margin-top: -20px; margin-bottom: 30px; font-style: italic; color: var(--text-muted); font-size: 1rem;">Total Professional Work Experience: 23 Months</p>
+            <p style="margin-top: -20px; margin-bottom: 30px; font-style: italic; color: var(--text-muted); font-size: 1rem;">Total Professional Work Experience: 24 Months</p>
             <div class="timeline">
                 
                 <div class="entry">
                     <div class="entry-header">
-                        <h3>The Abdus Salam International Centre for Theoretical Physics, Trieste, Italy</h3>
-                        <span class="entry-date">Jan 2024 - Ongoing (2 Months)</span>
+                        <h3>The Abdus Salam International Centre for Theoretical Physics (ICTP), Trieste, Italy</h3>
+                        <span class="entry-date">Jan 2026 - Present (5 Months)</span>
                     </div>
-                    <div class="entry-subtitle">Chapter Scientist (CS) - IPCC (Part-time with doctoral studies - Remote)</div>
-                    <p><strong>Scientific Assessment Support: Seventh Assessment Report WGIII [Chapter 10: Industry]</strong></p>
+                    <div class="entry-subtitle">Chapter Scientist - IPCC (Part-time with doctoral studies - Remote)</div>
+                    <p><strong><a href="https://www.ipcc.ch/assessment-report/ar7/" target="_blank">Scientific Assessment Support: Seventh Assessment Report WGIII [Chapter 10: Industry]</a></strong></p>
                     <ul class="custom-list" style="margin-top: 10px;">
-                        <li><strong>Fellowship Context:</strong> Selected for the competitive IPCC/ICTP/IAP CS Support Programme.</li>
-                        <li><strong>Global Collaboration:</strong> Collaborate directly with Coordinating Lead Authors Dr. Christopher Bataille (Columbia/SFU) and Dr. Kumaran Kadirgama (UMPSA), and Lead Authors to provide critical technical support for analyzing literature on industrial decarbonization, energy efficiency, and mitigation pathways.</li>
-                        <li><strong>Data Analysis and Reference Management:</strong> Execute rigorous verification of data and references using Python and Zotero, ensuring the report meets strict IPCC quality standards and referencing protocols.</li>
+                        <li><strong>Fellowship Context:</strong> Selected for the prestigious IPCC/ICTP/IAP Chapter Scientist Support Programme (Funded by Wellcome Trust) to support the production of the assessment report on Climate Change Mitigation.</li>
+                        <li><strong>Global Collaboration:</strong> Working directly under the mentorship of Coordinating Lead Authors (CLAs) Dr. Christopher Bataille (Columbia University / Simon Fraser University) and Dr. Kumaran Kadirgama (Universiti Malaysia Pahang Al-Sultan Abdullah). Provide critical technical support for analyzing literature on industrial decarbonization, energy efficiency, and mitigation strategies.</li>
+                        <li><strong>Data Analysis and Reference Management:</strong> Conducting literature reviews, data verification, and technical analysis using Python and Zotero. Ensure strict adherence to IPCC referencing and scientific quality standards.</li>
+                        <li><strong>Affiliation:</strong> Hosted at the Centre for Energy Regulation (CER), IIT Kanpur under the thesis supervision of Prof. Anoop Singh.</li>
                     </ul>
                 </div>
 
                 <div class="entry">
                     <div class="entry-header">
-                        <h3>International Institute for Applied Systems Analysis, Laxenburg, Austria</h3>
+                        <h3>International Institute for Applied Systems Analysis (IIASA), Laxenburg, Austria</h3>
                         <span class="entry-date">Jun 2025 - Aug 2025 (3 Months)</span>
                     </div>
-                    <div class="entry-subtitle">Young Scientists Summer Program (Part-time with doctoral studies)</div>
-                    <p><strong><a href="https://iiasa.ac.at/2025-yssp-participants" target="_blank">Integration of MESSAGEix Framework and Emission Trading System Modeling: Assessment of Indian Carbon Market Policy and 1.5°C Scenarios for Energy Transition</a></strong></p>
+                    <div class="entry-subtitle">Young Scientists Summer Program (YSSP) Fellow (On-site)</div>
+                    <p><strong><a href="https://iiasa.ac.at/2025-yssp-participants" target="_blank">Integration of MESSAGEix Framework and Emission Trading System Modeling</a></strong></p>
                     <ul class="custom-list" style="margin-top: 10px;">
                         <li><strong>Fellowship:</strong> Awarded Prof. Jyoti and Kirit Parikh Fellowship to participate at YSSP.</li>
                         <li><strong>Project Description:</strong> Developed novel framework of sectoral emissions trading within integrated assessment model. Applied the framework in the case of cement and steel industry in India. Presented findings in international conferences, and submitted YSSP report.</li>
                         <li><strong>YSSP Mentors:</strong> Dr. Setu Pelz, Dr. Siddharth Joshi and Dr. Shonali Pachauri.</li>
-                        <li><strong>Activities:</strong> 2025 YSSP Final Colloquium Proceedings Editor.</li>
+                        <li><strong>Activities:</strong> <a href="https://iiasa.ac.at/capacity-development/yssp-young-scientists-summer-program/yssp-past-participants-and-cohorts" target="_blank">2025 YSSP Final Colloquium Proceedings Editor.</a></li>
                     </ul>
                 </div>
 
                 <div class="entry">
                     <div class="entry-header">
-                        <h3>Centre for Energy Regulation, Indian Institute of Technology - Kanpur</h3>
+                        <h3>Centre for Energy Regulation (CER), IIT Kanpur</h3>
                         <span class="entry-date">Apr 2022 - Dec 2022 (9 Months)</span>
                     </div>
                     <div class="entry-subtitle">Senior Student Research Associate (Part-time with doctoral studies)</div>
                     <p><strong><a href="https://www.niti.gov.in/verticals/energy" target="_blank">Developing Energy-Climate Policy Modelling for India using MESSAGEix framework</a></strong></p>
                     <ul class="custom-list" style="margin-top: 10px;">
-                        <li><strong>Project Description:</strong> Project Parties -- IIT Kanpur and NITI Aayog; India Energy Model -- 7 sectors; Dynamic Energy System Cost Minimization.</li>
+                        <li><strong>Project Description:</strong> Project Parties – IIT Kanpur and NITI Aayog; India Energy Model – 7 sectors; Dynamic Energy System Cost Minimization.</li>
                         <li><strong>Data Collection, Data Rectification and Data Verification:</strong> Extensive data analytics exercise on agriculture, transport, domestic, commercial, industry, coal, oil, natural gas and power sector data; Total Parameters 1860.</li>
-                        <li><strong>Modelling Exercise and Post-processing:</strong> Developed Python code for carrying out modelling and reporting exercises. Validated mathematical formulation in GAMS code of MESSAGEix framework. Visualisation of model results in Python using matplotlib and MS Excel.</li>
+                        <li><strong>Modelling Exercise and Post-processing:</strong> Developed Python code for carrying out energy system optimization modelling and reporting exercises. Verified/Validated mathematical formulation in GAMS code of MESSAGEix framework. Visualisation of model results in Python using matplotlib and MS Excel.</li>
                         <li><strong>Scenario Analysis and Reporting:</strong> Devised various scenarios incorporating INDC commitments and policy targets. Final report writing.</li>
                     </ul>
                 </div>
 
                 <div class="entry">
                     <div class="entry-header">
-                        <h3>Centre for Energy Regulation, Indian Institute of Technology - Kanpur</h3>
-                        <span class="entry-date">Aug 2020 - Jan 2021 (4 Months)</span>
+                        <h3>Centre for Energy Regulation (CER), IIT Kanpur</h3>
+                        <span class="entry-date">Aug 2020 - Jan 2021 (6 Months)</span>
                     </div>
                     <div class="entry-subtitle">Project Associate (Full-time)</div>
                     <ul class="custom-list">
-                        <li><strong>Regulatory Policy Research:</strong> Summarized draft acts, rules, policies and regulations from the power sector. Assisted Principal Investigator (PI) in critically analyzing and submitting policy comments to regulatory authorities. Contributed to CER's Quarterly Newsletter -- <strong><a href="https://cer.iitk.ac.in/newsletter" target="_blank">Regulatory Insights</a></strong>. Assisted PI in carrying out research in the power market for EAL's Quarterly Newsletter -- <strong><a href="https://eal.iitk.ac.in/newsletter.php" target="_blank">Power Chronicle</a></strong>.</li>
+                        <li><strong>Regulatory Policy Research:</strong> Summarized draft acts, rules, policies and regulations from the power sector. Assisted Principal Investigator (PI) in critically analyzing and submitting policy comments to regulatory authorities. Contributed to CER's Quarterly Newsletter – <strong><a href="https://cer.iitk.ac.in/newsletter" target="_blank">Regulatory Insights</a></strong>. Assisted PI in carrying out research in the power market for EAL's Quarterly Newsletter – <strong><a href="https://eal.iitk.ac.in/newsletter.php" target="_blank">Power Chronicle</a></strong>.</li>
                         <li><strong><a href="https://cer.iitk.ac.in/rdb" target="_blank">Regulatory Data Dashboard</a>:</strong> Contributed in the development of the Regulatory Data Dashboard. Assisted PI in carrying out research related to <strong>Aggregate Revenue Requirement, Average Cost of Supply, Regulatory Norms for Electricity Tariff and Financial Performance of Distribution Companies</strong>.</li>
-                        <li><strong><a href="https://cer.iitk.ac.in/events" target="_blank">Regulatory Manthan (RM)</a>:</strong> Contributed in organising CER's flagship event 1st and 2nd Regulatory Manthan. RM aims to discuss and identify national and international best practices. Assisted PI in research in the topic titled <strong><a href="https://cer.iitk.ac.in/RM/rm1" target="_blank">Developing a Multi-year Tariff (MYT) Framework</a></strong> and <strong><a href="https://cer.iitk.ac.in/RM/rm2" target="_blank">Relinquishment of Long-term CGS PPAs beyond Tenure</a></strong>.</li>
+                        <li><strong><a href="https://cer.iitk.ac.in/events" target="_blank">Regulatory Manthan (RM)</a>:</strong> Contributed in organising CER's flagship event 1st and 2nd Regulatory Manthan. RM aims to discuss and identify national and international best practices, thus enhancing learning and capacity building. Assisted PI in research on <strong><a href="https://cer.iitk.ac.in/RM/rm1" target="_blank">Developing a Multi-year Tariff (MYT) Framework</a></strong> and <strong><a href="https://cer.iitk.ac.in/RM/rm2" target="_blank">Relinquishment of Long-term CGS PPAs beyond Tenure</a></strong>.</li>
                     </ul>
                 </div>
 
@@ -756,10 +791,32 @@
                     </div>
                     <div class="entry-subtitle">Self-Employed (Full-time)</div>
                     <ul class="custom-list">
-                        <li><strong>Client 1: Waatavaran CES Foundation, Mumbai, India (Apr 2020 - Jul 2020):</strong> Policy advocacy and outreach: Conducted community mobilization on social issues, primarily <strong>air pollution</strong>, <strong>biodiversity loss</strong> and <strong>forest rights</strong>.</li>
-                        <li><strong>Client 2: Climate Risk Horizons, Bangalore, India (Jul 2020 - Aug 2020):</strong> Assessment of the <strong>financial performance</strong> of coal-based thermal power plants in India.</li>
+                        <li><strong>Consultant - Project & Network Co-ordinator, Waatavaran Foundation (May 2020 - Jul 2020):</strong> 
+                            <ul style="padding-left: 20px; list-style-type: circle; margin-top: 5px; margin-bottom: 10px;">
+                                <li><em>Campaigning Strategy:</em> Community mobilization on social issues, primarily air pollution, biodiversity loss and forest rights.</li>
+                                <li><em>Policy Advocacy and Outreach:</em> Established partnerships with local organizations and working with partners in Maharashtra, India.</li>
+                                <li><em>Project Management and Public Relations:</em> Monitoring progress and KPIs of team. Managed content development strategy on website, medium blog and social media platforms.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Researcher - Energy Finance, Climate Risk Horizon (Jul 2020 - Aug 2020):</strong> Assessment of the <strong>financial performance</strong> of coal-based thermal power plants in India.</li>
                     </ul>
                 </div>
+            </div>
+        </section>
+
+        <!-- Teaching Assistantships -->
+        <section id="teaching">
+            <h2><i class="fas fa-chalkboard-teacher"></i> Teaching Assistantships</h2>
+            <div class="entry" style="padding: 20px;">
+                <p style="margin-bottom: 15px; color: var(--text-muted);">Assisted in delivering the following courses at the Department of Management Sciences, IIT Kanpur:</p>
+                <ul class="custom-list">
+                    <li><strong>MBA601:</strong> Finance and Accounting <em>(Aug 2024 – Nov 2024)</em></li>
+                    <li><strong>MBA677:</strong> Project Financing and Management <em>(Jan 2024 – May 2024 & Jan 2022 – May 2022)</em></li>
+                    <li><strong>MBA784:</strong> Derivatives & Risk Management for the Energy and Environmental Markets <em>(Jan 2024 – Mar 2024)</em></li>
+                    <li><strong>MBA683:</strong> Power Sector Reform and Regulation – Theory and Practice <em>(Aug 2023 – Nov 2023)</em></li>
+                    <li><strong>IME609:</strong> Energy, Environment and Climate: Economic and Policy Modelling <em>(Jan 2023 – May 2023)</em></li>
+                    <li><strong>MBA782:</strong> Renewable Energy – Economics, Policy, and Regulation <em>(Aug 2022 – Nov 2022)</em></li>
+                </ul>
             </div>
         </section>
 
@@ -802,16 +859,35 @@
                 <div class="entry">
                     <div class="entry-header">
                         <h3>RADICALi Pte Ltd, Singapore</h3>
-                        <span class="entry-date">Nov 2019 - Aug 2020 (8 Months)</span>
+                        <span class="entry-date">Nov 2019 - Jul 2020 (9 Months)</span>
                     </div>
-                    <div class="entry-subtitle">Intern - Regulatory Intelligence (Part-time and Remote)</div>
+                    <div class="entry-subtitle">Intern - Regulatory Analysis (Part-time and Remote)</div>
+                    <p><strong>Responsibilities included:</strong></p>
+                    <ul class="custom-list" style="margin-top: 10px;">
+                        <li>Assisting RADICALi team in regulatory intelligence and content development efforts and constantly challenging and rethinking how regulations can be communicated, understood and implemented by users.</li>
+                        <li>Reviewing regulations and distilling requirements and supporting information.</li>
+                        <li>Tracking and maintaining regulatory developments.</li>
+                        <li>Understanding the types of documentation provided by regulatory bodies and identifying which regulatory documents are relevant to customers.</li>
+                        <li>Mapping the source of regulatory documentation found on regulator websites.</li>
+                        <li>Reviewing regulatory documents and extracting data using different platforms.</li>
+                        <li>Creating new and maintaining existing libraries of regulatory documents including updates.</li>
+                        <li>Working alongside technology and data science team members to satisfy development deadlines.</li>
+                        <li>Supporting in all aspects of the creation of data and content.</li>
+                    </ul>
                 </div>
+                
                 <div class="entry">
                     <div class="entry-header">
-                        <h3>National Institute of Public Finance and Policy, New Delhi, India</h3>
-                        <span class="entry-date">Mar 2019 - June 2019 (3 Months)</span>
+                        <h3>National Institute of Public Finance and Policy (NIPFP), New Delhi, India</h3>
+                        <span class="entry-date">Mar 2019 - May 2019 (3 Months)</span>
                     </div>
-                    <div class="entry-subtitle">Research Intern - Economics (Full-time)</div>
+                    <div class="entry-subtitle">Summer Research Intern (Full-time)</div>
+                    <p style="margin-bottom: 10px;">Placed in the Macro/Finance group under the supervision of <strong>Prof. (Dr.) Illa Patnaik</strong>, former Principal Economic Advisor to the Prime Minister. The group contributes to exchange rate regimes, capital flows, and monetary policy through quantitative research and ongoing macroeconomic policy analysis.</p>
+                    <ul class="custom-list">
+                        <li><strong>Data Analytics & R Programming:</strong> Worked primarily on the Firm Level Database (FLD), a SQL interactive big data set sourced by CMIE Prowessdx. Employed R tools for data wrangling to deliver data in required formats.</li>
+                        <li><strong>Economic Research:</strong> Figured out trends of systematic risk in Indian stocks over a time period (estimating beta value of NIFTY 50 firms), presenting findings via LaTeX-based statistical charts and graphs.</li>
+                        <li><strong>Legal Research & Cross-functional Support:</strong> Executed data extraction, cleaning, and visualization. Re-visited published legal policy papers and delivered presentations. Assisted various research fellows across teams like Ministry of Corporate Affairs, Home Affairs, and Health.</li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -822,19 +898,24 @@
             <div class="skills-grid">
                 <div class="skill-card">
                     <h4>Software & Languages</h4>
-                    <p><strong>MS Excel, GAMS, Python</strong> (Libraries - pandas, GAMSPY, matplotlib), <strong>R, LaTeX</strong></p>
+                    <p><strong>MS Excel, GAMS, Python</strong> (Libraries - pandas, GAMSPY, matplotlib), <strong>R, Java, LaTeX</strong></p>
                 </div>
                 <div class="skill-card">
                     <h4>Energy/Power Systems Models</h4>
                     <p>IIASA's <strong><a href="https://docs.messageix.org/en/latest/index.html" target="_blank">MESSAGEix Framework</a></strong>, IRENA's <a href="https://www.irena.org/Energy-Transition/Planning/Flextool" target="_blank">FlexTool</a>, SEI's <a href="https://leap.sei.org/" target="_blank">LEAP</a>, <a href="https://iess2047.gov.in" target="_blank">IESS2047</a></p>
                 </div>
+                <div class="skill-card">
+                    <h4>Other Top Skills & Languages</h4>
+                    <p><strong>Reference Management</strong>, <strong>Literature Reviews</strong>, <strong>Zotero</strong></p>
+                    <p style="margin-top: 5px;"><strong>Languages:</strong> English (Full Professional), German (Elementary), Marathi (Elementary), Hindi (Limited Working).</p>
+                </div>
                 <div class="skill-card" style="grid-column: 1 / -1;">
                     <h4>Professional, Quantitative and Qualitative Research Skills</h4>
                     <ul class="custom-list" style="margin-top: 15px;">
                         <li><strong>Operation Research:</strong> Linear and Mixed Integer Programming specialization in Energy System Optimization, and <strong>Mathematical Modeling</strong>.</li>
-                        <li><strong>Data Analysis:</strong> Statistical Modeling using Regression [Github Repositories: <a href="https://github.com/shreeyashn20" target="_blank">github.com/shreeyashn20</a>].</li>
-                        <li><strong>Policy Analysis:</strong> Regulatory Impact Assessment, Policy Research and Analysis specialization in <strong>Energy and Climate Policies</strong>.</li>
-                        <li><strong>Advanced Modeling:</strong> System Dynamics Modeling, Agent-Based Modeling, Game Theory.</li>
+                        <li><strong>Data Analysis:</strong> Statistical Modeling using Regression (OLS, Fixed Effect, Probit, Logit).</li>
+                        <li><strong>Policy Analysis:</strong> Regulatory Impact Assessment, Systematic Literature Review, Policy Research and Analysis specialization in <strong>Energy and Climate Policies</strong>.</li>
+                        <li><strong>Advanced Modeling:</strong> System Dynamics Modeling, Agent-Based Modeling, Game Theory, Data Envelopment Analysis.</li>
                         <li><strong>Communication:</strong> Academic & Report Writing, Public Presentation, Grant Writing, PowerPoint Presentation, Journal/Academic Writing, Copywriting and Legal Drafting.</li>
                         <li><strong>Research Design:</strong> Literature Review, Design Thinking, Exploratory Research, Survey, Focus Group Discussion.</li>
                     </ul>
@@ -846,7 +927,7 @@
         <section id="repositories">
             <h2><i class="fab fa-git-alt"></i> GitHub Repositories</h2>
             <div class="repo-grid">
-                <ul class="custom-list" style="grid-column: 1 / -1; display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: x 20px;">
+                <ul class="custom-list" style="grid-column: 1 / -1; display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 20px;">
                     <li><a href="https://github.com/iiasa/message_ix/discussions/779#discussion-6065747" target="_blank">A Simplified Approach to Inputting Data into MESSAGEix without MS Excel</a> <span class="highlight-badge">Python</span></li>
                     <li><a href="https://github.com/shreeyashn20/West-Bengal-Cross-Subsidy-Cross-Subsidy-Surcharge" target="_blank">West Bengal Cross Subsidy and Cross Subsidy Surcharge</a> <span class="highlight-badge">Excel</span></li>
                     <li><a href="https://github.com/shreeyashn20/Multiple-Linear-Regression---Combined-Cycle-Power-Plant" target="_blank">Multiple Linear Regression for Combined Cycle Power Plant</a> <span class="highlight-badge">R</span></li>
@@ -883,7 +964,10 @@
                     <h4>Certifications & Workshops</h4>
                     <ul class="custom-list">
                         <li><strong>2024 Summer School for System Modeling [July, 2024]</strong> - <em>IIASA, Laxenburg, Austria [On-site]</em></li>
-                        <li><strong>Electric Vehicle: Mobility meets the power system</strong> - <em>Florence School of Regulation, European Union Institute</em></li>
+                        <li><strong>Introduction to Cyber Security</strong></li>
+                        <li><strong>R 101 by Cognitive Class: An IBM Initiative</strong></li>
+                        <li><strong>Statistics 101</strong></li>
+                        <li><strong>Electric Vehicles: Mobility meets the power system</strong> - <em>Florence School of Regulation, European Union Institute</em></li>
                         <li><strong>Model for Analysis of Energy Demand</strong> - <em>Climate Compatible Growth, U.K.</em></li>
                         <li><strong>Masterclass in ESG Reporting and Impact Measurement</strong> - <em>NIT Rourkela</em></li>
                         <li><strong>Stakeholder Consultation on Indian Carbon Market</strong> - <em>BEE and MoEFCC, Govt of India</em></li>
