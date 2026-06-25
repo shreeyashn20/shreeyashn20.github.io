@@ -22,36 +22,36 @@
 
     <style>
         :root {
-            /* Light Theme: Maroon Red Palette */
-            --primary-color: #7b232a;
-            --primary-hover: #5e191f;
-            --bg-color: #faeceb;
-            --paper-bg: #fff6f5;
-            --text-main: #3d1f21;
-            --text-muted: #7e575a;
-            --border-color: #ebd5d4;
-            --link-color: #8c2f34;
-            --badge-bg: #f9e4e3;
-            --timeline-line: #e8d0cf;
-            --shadow-sm: 0 3px 12px rgba(123, 35, 42, 0.12);
-            --shadow-md: 0 14px 42px rgba(123, 35, 42, 0.16);
+            /* Light Theme: Premium Academic Journal Palette */
+            --primary-color: #9e1b1e; 
+            --primary-hover: #7a1517;
+            --bg-color: #f2f5f8;
+            --paper-bg: #ffffff;
+            --text-main: #2b2b2b;
+            --text-muted: #5a5a5a;
+            --border-color: #e4e7ea;
+            --link-color: #00509e;
+            --badge-bg: #fcf1f1;
+            --timeline-line: #d1d5db;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.04);
+            --shadow-md: 0 12px 40px rgba(0,0,0,0.08);
             --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
         }
 
         [data-theme="dark"] {
-            /* Dark Theme: Warm Maroon Palette */
-            --primary-color: #f59897;
-            --primary-hover: #fcb6b4;
-            --bg-color: #1f0d10;
-            --paper-bg: #2d161a;
-            --text-main: #f5e5e5;
-            --text-muted: #b89fa1;
-            --border-color: #3f2226;
-            --link-color: #f2a3a2;
-            --badge-bg: #3b1f22;
-            --timeline-line: #4a2830;
-            --shadow-sm: 0 4px 8px rgba(0, 0, 0, 0.32);
-            --shadow-md: 0 12px 36px rgba(0, 0, 0, 0.5);
+            /* Dark Theme Variables */
+            --primary-color: #e55a5d;
+            --primary-hover: #ff7b7e;
+            --bg-color: #0d1117;
+            --paper-bg: #161b22;
+            --text-main: #f0f6fc;
+            --text-muted: #8b949e;
+            --border-color: #30363d;
+            --link-color: #58a6ff;
+            --badge-bg: #322122;
+            --timeline-line: #30363d;
+            --shadow-sm: 0 4px 6px rgba(0,0,0,0.3);
+            --shadow-md: 0 10px 30px rgba(0,0,0,0.5);
         }
 
         * {
@@ -61,22 +61,11 @@
             scroll-behavior: smooth;
         }
 
-        html {
-            background: transparent;
-        }
-
         body {
             font-family: 'Inter', sans-serif;
             line-height: 1.7;
             color: var(--text-main);
             background-color: var(--bg-color);
-            background-image:
-                linear-gradient(rgba(123, 35, 42, 0.10) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(123, 35, 42, 0.10) 1px, transparent 1px),
-                linear-gradient(rgba(123, 35, 42, 0.16) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(123, 35, 42, 0.16) 1px, transparent 1px);
-            background-size: 20px 20px, 20px 20px, 100px 100px, 100px 100px;
-            background-position: 0 0, 0 0, 0 0, 0 0;
             transition: var(--transition);
             -webkit-font-smoothing: antialiased;
         }
@@ -101,7 +90,6 @@
             padding: 40px 0;
             gap: 40px;
             align-items: flex-start;
-            background: transparent;
         }
 
         /* Sidebar Profile */
@@ -109,241 +97,28 @@
             flex: 0 0 530px;
             position: sticky;
             top: 40px;
-            background: transparent !important;
-            border: none;
-            border-radius: 0;
-            padding: 0;
-            box-shadow: none;
+            background: var(--paper-bg);
+            border-radius: 8px;
+            padding: 40px 35px;
+            box-shadow: var(--shadow-md);
+            border-top: 6px solid var(--primary-color);
             max-height: calc(100vh - 80px);
             overflow-y: auto;
             transition: var(--transition);
-            scrollbar-width: none;
-            -ms-overflow-style: none;
         }
 
-        .sidebar::-webkit-scrollbar {
-            width: 0;
-            height: 0;
-        }
-        .sidebar::-webkit-scrollbar-thumb {
-            background: transparent;
-            border-radius: 0;
-        }
+        .sidebar::-webkit-scrollbar { width: 5px; }
+        .sidebar::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 5px; }
 
-        .profile-card {
-            background: var(--bg-color);
-            border: 1px solid var(--border-color);
-            border-radius: 24px;
-            padding: 30px;
-            margin-bottom: 30px;
-            box-shadow: var(--shadow-sm);
-        }
-
-        .sidebar-card {
-            background: var(--paper-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 24px;
-            padding: 28px 26px;
-            margin-bottom: 30px;
-            box-shadow: var(--shadow-sm);
-            transition: var(--transition);
-        }
-
-        .sidebar-card:last-child {
-            margin-bottom: 0;
-        }
-
-        .card-theme-1 {
-            background: rgba(46, 94, 166, 0.12);
-            border-color: rgba(46, 94, 166, 0.28);
-            color: #102840;
-            backdrop-filter: blur(18px);
-            -webkit-backdrop-filter: blur(18px);
-            transition: box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease;
-        }
-        .profile-card.card-theme-1:hover,
-        .card-theme-1:hover {
-            transform: none;
-            box-shadow: 0 0 40px rgba(46, 94, 166, 0.26);
-            border-color: rgba(46, 94, 166, 0.45);
-            background: rgba(46, 94, 166, 0.16);
-        }
-        .card-theme-1 h2 {
-            color: #1f496b;
-            border-bottom-color: rgba(46, 94, 166, 0.32);
-        }
-
-        .card-theme-2 {
-            background: #fff3ec;
-            border-color: #e7b6a0;
-            color: #5e382c;
-        }
-        .card-theme-2 h2 {
-            color: #ab5d45;
-            border-bottom-color: #e7b6a0;
-        }
-
-        .card-theme-3 {
-            background: #f6eef8;
-            border-color: #d8c2e9;
-            color: #3f2b47;
-        }
-        .card-theme-3 h2 {
-            color: #81579f;
-            border-bottom-color: #d8c2e9;
-        }
-
-        .card-theme-4 {
-            background: #fff6e8;
-            border-color: #ead1b4;
-            color: #4b3822;
-        }
-        .card-theme-4 h2 {
-            color: #a36e3e;
-            border-bottom-color: #ead1b4;
-        }
-
-        .card-theme-5 {
-            background: #fff3f3;
-            border-color: #edc7c8;
-            color: #542f33;
-        }
-        .card-theme-5 h2 {
-            color: #b24f57;
-            border-bottom-color: #edc7c8;
-        }
-
-        .card-theme-6 {
-            background: #fff3e6;
-            border-color: #f3c49a;
-            color: #b45f1b;
-        }
-        .card-theme-6 h2 {
-            color: #d57226;
-            border-bottom-color: #f3c49a;
-        }
-        .card-theme-6 h3,
-        .card-theme-6 p,
-        .card-theme-6 li,
-        .card-theme-6 .entry-subtitle,
-        .card-theme-6 a {
-            color: #b45f1b;
-        }
-        .card-theme-6 .entry-date {
-            background: #d57226;
-            color: #fff;
-        }
-        .card-theme-6 ul.custom-list li::before {
-            color: #d57226;
-        }
-
-        .card-theme-7 {
-            background: #f8f1fb;
-            border-color: #d8c3d1;
-            color: #433245;
-        }
-        .card-theme-7 h2 {
-            color: #7b5f80;
-            border-bottom-color: #d8c3d1;
-        }
-
-        .card-theme-8 {
-            background: #f1f4ec;
-            border-color: #cdd5c2;
-            color: #354236;
-        }
-        .card-theme-8 h2 {
-            color: #5c7d57;
-            border-bottom-color: #cdd5c2;
-        }
-
-        .card-theme-9 {
-            background: #fbf5e5;
-            border-color: #ead9b7;
-            color: #4d4123;
-        }
-        .card-theme-9 h2 {
-            color: #8a6d2f;
-            border-bottom-color: #ead9b7;
-        }
-
-        .card-theme-10 {
-            background: #fff0ef;
-            border-color: #f1c7c8;
-            color: #5d3236;
-        }
-        .card-theme-10 h2 {
-            color: #b24b55;
-            border-bottom-color: #f1c7c8;
-        }
-
-        .card-theme-11 {
-            background: #f3eef0;
-            border-color: #d5c2c6;
-            color: #4a3741;
-        }
-        .card-theme-11 h2 {
-            color: #7f5f72;
-            border-bottom-color: #d5c2c6;
-        }
-
-        .card-theme-12 {
-            background: #fff6e7;
-            border-color: #efd2a7;
-            color: #4d4027;
-        }
-        .card-theme-12 h2 {
-            color: #ac7a32;
-            border-bottom-color: #efd2a7;
-        }
-
-        .profile-card h1 {
-            margin-bottom: 18px;
-        }
-
-        .profile-card img.profile-photo {
-            width: 240px;
-            height: 240px;
-            object-fit: cover;
-            border-radius: 28px;
-            display: block;
-            margin: 0 auto 24px;
-            border: none;
-            box-shadow: 0 20px 45px rgba(10, 44, 90, 0.12), inset 0 0 0 1px rgba(46, 94, 166, 0.08);
-            transition: box-shadow 0.4s ease;
-        }
-
-        .profile-card .title-roles,
-        .profile-card .research-area {
-            margin-bottom: 22px;
-        }
-
+        /* Main Content */
         .main-content {
             flex: 1;
-            background: transparent;
+            background: var(--paper-bg);
             border-radius: 8px;
-            padding: 0;
-            box-shadow: none;
+            padding: 60px 80px;
+            box-shadow: var(--shadow-md);
             min-width: 0;
             transition: var(--transition);
-        }
-
-        .main-content section {
-            background: var(--paper-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 24px;
-            padding: 40px 40px 45px;
-            margin-bottom: 30px;
-            box-shadow: var(--shadow-sm);
-            transition: var(--transition);
-        }
-
-        .main-content section:last-child {
-            margin-bottom: 0;
-        }
-
-        .main-content section h2 {
-            margin-top: 0;
         }
 
         /* Typography */
@@ -418,21 +193,13 @@
             font-style: italic;
         }
 
-        .research-area,
-        .affiliation-box,
-        .former-affiliation-box {
+        .research-area {
             background: var(--bg-color);
             padding: 18px;
-            border: 1px solid rgba(108, 40, 55, 0.12);
-            border-radius: 22px;
+            border-left: 4px solid var(--primary-color);
+            border-radius: 4px;
             font-size: 0.95rem;
             margin-bottom: 30px;
-            color: var(--text-main);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04);
-        }
-
-        .affiliation-box strong,
-        .former-affiliation-box strong {
             color: var(--text-main);
         }
 
@@ -801,29 +568,19 @@
             <i class="fas fa-moon"></i>
         </button>
 
-        <div class="profile-card card-theme-1">
-            <img src="Shreeyash Nitin Malode.png" alt="Shreeyash Nitin Malode" class="profile-photo">
-            <h1>Shreeyash Nitin Malode</h1>
-            <div class="title-roles">
-            </div>
-
-            <div class="affiliation-box">
-                <strong>Current Affiliation:</strong><br>
-                Chapter Scientist - Intergovernmental Panel on Climate Change (IPCC)</div> Doctoral Candidate - Indian Institute of Technology Kanpur (IITK)
-            </div>
-
-            <div class="former-affiliation-box">
-                <strong>Former Affiliation:</strong><br>
-                2025 Young Scientists Summer Program (YSSP) Fellow - International Institute for Applied Systems Analysis (IIASA)
-            </div>
-
-            <div class="research-area">
-                <strong>Research Areas:</strong><br> Emissions Trading, Integrated Assessment Modeling, and Energy-Climate Policy Modeling.
-            </div>
+        <h1>Shreeyash Nitin Malode</h1>
+        <div class="title-roles">
+            <strong>Chapter Scientist - Intergovernmental Panel on Climate Change (IPCC)</strong><br><br>
+            Doctoral Candidate - Indian Institute of Technology Kanpur (IITK)
+            <br><br>
+            2025 Young Scientists Summer Program (YSSP) Fellow - International Institute for Applied Systems Analysis (IIASA)
         </div>
 
-        <div class="sidebar-card card-theme-2">
-            <ul class="contact-list">
+        <div class="research-area">
+            <strong>Research Areas:</strong><br> Emissions Trading, Integrated Assessment Modeling, and Energy-Climate Policy Modeling.
+        </div>
+
+        <ul class="contact-list">
             <li>
                 <i class="fas fa-envelope"></i> 
                 <span class="masked-data print-reveal" data-real="shreeyashmalode@gmail.com" onclick="revealContact(this, 'email')">
@@ -847,23 +604,19 @@
                 <span>Kanpur, Uttar Pradesh, India</span>
             </li>
         </ul>
+
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/shreeyashmalode/" class="social-btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://github.com/shreeyashn20" class="social-btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://orcid.org/0000-0001-9571-0424" class="social-btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-orcid"></i> ORCID</a>
+            <a href="https://scholar.google.com/citations?user=WQcqZIoAAAAJ&hl=en" class="social-btn" target="_blank" rel="noopener noreferrer"><i class="fas fa-graduation-cap"></i> Scholar</a>
         </div>
 
-        <div class="sidebar-card card-theme-3">
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/shreeyashmalode/" class="social-btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                <a href="https://github.com/shreeyashn20" class="social-btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
-                <a href="https://orcid.org/0000-0001-9571-0424" class="social-btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-orcid"></i> ORCID</a>
-                <a href="https://scholar.google.com/citations?user=WQcqZIoAAAAJ&hl=en" class="social-btn" target="_blank" rel="noopener noreferrer"><i class="fas fa-graduation-cap"></i> Scholar</a>
-            </div>
-
-            <a href="https://github.com/shreeyashn20/shreeyashn20/blob/main/Shreeyash_Nitin_Malode_CV_Nov_25.pdf" class="btn-primary" target="_blank" rel="noopener noreferrer">
-                <i class="fas fa-file-pdf"></i> Download PDF CV
-            </a>
-        </div>
+        <a href="https://github.com/shreeyashn20/shreeyashn20/blob/main/Shreeyash_Nitin_Malode_CV_Nov_25.pdf" class="btn-primary" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-file-pdf"></i> Download PDF CV
+        </a>
         
-        <div class="sidebar-card card-theme-4">
-            <ul class="nav-menu">
+        <ul class="nav-menu">
             <li><a href="#about" class="nav-link active">About Me</a></li>
             <li><a href="#education" class="nav-link">Education</a></li>
             <li><a href="#publications" class="nav-link">Publications</a></li>
@@ -881,7 +634,7 @@
 
     <main class="main-content">
         
-        <section id="about" class="card-theme-5">
+        <section id="about">
             <h2><i class="fas fa-user-circle"></i> About Me</h2>
             <div class="summary-text">
                 <p>You see <strong>"Emissions Trading"</strong> and <strong>"Energy-Climate Policy Modelling"</strong> on my profile, and yeah, that's a big part of what I do. But what that really means is I'm constantly digging into data, building models (lots of love for <strong>MESSAGEix!</strong>), and trying to make sense of how we can transition to a cleaner energy future.</p>
@@ -889,7 +642,7 @@
             </div>
         </section>
 
-        <section id="education" class="card-theme-6">
+        <section id="education">
             <h2><i class="fas fa-graduation-cap"></i> Education</h2>
             <div class="timeline">
                 <div class="entry">
@@ -948,7 +701,7 @@
             </div>
         </section>
 
-        <section id="publications" class="card-theme-7">
+        <section id="publications">
             <h2><i class="fas fa-book-open"></i> Publications</h2>
             <ul class="custom-list">
                 <li>
@@ -969,7 +722,7 @@
             </ul>
         </section>
 
-        <section id="experience" class="card-theme-8">
+        <section id="experience">
             <h2><i class="fas fa-briefcase"></i> Work Experience</h2>
             <p style="margin-top: -20px; margin-bottom: 30px; font-style: italic; color: var(--text-muted); font-size: 1rem;">Total Professional Work Experience: 24 Months</p>
             <div class="timeline">
@@ -1052,7 +805,7 @@
             </div>
         </section>
 
-        <section id="teaching" class="card-theme-9">
+        <section id="teaching">
             <h2><i class="fas fa-chalkboard-teacher"></i> Teaching Assistantships</h2>
             <div class="entry" style="padding: 20px;">
                 <p style="margin-bottom: 15px; color: var(--text-muted);">Assisted in delivering the following courses at the Department of Management Sciences, IIT Kanpur:</p>
@@ -1067,7 +820,7 @@
             </div>
         </section>
 
-        <section id="presentations" class="card-theme-10">
+        <section id="presentations">
             <h2><i class="fas fa-microphone-alt"></i> International Conference/Workshop Presentations</h2>
             <ul class="custom-list">
                 <li>
@@ -1097,7 +850,7 @@
             </ul>
         </section>
 
-        <section id="internships" class="card-theme-11">
+        <section id="internships">
             <h2><i class="fas fa-user-graduate"></i> Internship Experience</h2>
             <p style="margin-top: -20px; margin-bottom: 25px; font-style: italic; color: var(--text-muted); font-size: 1rem;">Total Internship Experience: 11 Months</p>
             <div class="timeline">
@@ -1137,7 +890,7 @@
             </div>
         </section>
 
-        <section id="skills" class="card-theme-12">
+        <section id="skills">
             <h2><i class="fas fa-laptop-code"></i> Technical and Professional Skills</h2>
             <div class="skills-grid">
                 <div class="skill-card">
