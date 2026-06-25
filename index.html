@@ -33,8 +33,8 @@
             --link-color: #00509e;
             --badge-bg: #fcf1f1;
             --timeline-line: #d1d5db;
-            --grid-color: rgba(0, 0, 0, 0.08);
-            --grid-color-strong: rgba(0, 0, 0, 0.16);
+            --grid-color: rgba(158, 27, 30, 0.10);
+            --grid-color-strong: rgba(158, 27, 30, 0.22);
             --shadow-sm: 0 2px 8px rgba(0,0,0,0.04);
             --shadow-md: 0 12px 40px rgba(0,0,0,0.08);
             --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -95,24 +95,24 @@
         /* WIDE LAYOUT */
         .layout-wrapper {
             display: flex;
-            width: 96%; /* Fits to page width */
-            max-width: 1800px;
+            width: 100%;
+            max-width: none;
             margin: 0 auto;
-            padding: 40px 0;
-            gap: 40px;
+            padding: 20px 12px;
+            gap: 12px;
             align-items: flex-start;
         }
 
         /* Sidebar Profile */
         .sidebar {
-            flex: 0 0 530px;
+            flex: 0 0 620px;
             position: sticky;
             top: 40px;
-            background: var(--paper-bg);
-            border-radius: 8px;
-            padding: 40px 35px;
-            box-shadow: var(--shadow-md);
-            border-top: 6px solid var(--primary-color);
+            background: transparent;
+            border-radius: 0;
+            padding: 0;
+            box-shadow: none;
+            border-top: none;
             max-height: calc(100vh - 80px);
             overflow-y: auto;
             transition: var(--transition);
@@ -124,21 +124,62 @@
             border-radius: 50%;
             object-fit: cover;
             display: block;
-            margin: 0 auto 32px;
+            margin: 0 auto 24px;
             border: 4px solid var(--primary-color);
             box-shadow: var(--shadow-sm);
         }
 
-        .sidebar::-webkit-scrollbar { width: 5px; }
-        .sidebar::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 5px; }
+        .sidebar-card {
+            background: var(--paper-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 22px;
+            padding: 24px;
+            margin-bottom: 16px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .sidebar-card-title {
+            margin-bottom: 18px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .sidebar-card-profile .title-roles {
+            margin-bottom: 0;
+        }
+
+        .sidebar-card .social-links {
+            margin-bottom: 0;
+        }
+
+        .sidebar-card .btn-primary {
+            margin: 0;
+        }
+
+        .sidebar-card-profile h1,
+        .sidebar-card-profile .title-roles {
+            text-align: center;
+        }
+
+        .sidebar {
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        .sidebar::-webkit-scrollbar {
+            display: none;
+        }
 
         /* Main Content */
         .main-content {
             flex: 1;
-            background: var(--paper-bg);
-            border-radius: 8px;
+            background: transparent;
+            border-radius: 0;
             padding: 60px 80px;
-            box-shadow: var(--shadow-md);
+            box-shadow: none;
             min-width: 0;
             transition: var(--transition);
         }
@@ -170,10 +211,15 @@
         }
 
         section {
-            margin-bottom: 70px;
+            margin-bottom: 30px;
             opacity: 0;
             transform: translateY(20px);
             transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            background: var(--paper-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 40px 45px;
+            box-shadow: var(--shadow-sm);
         }
 
         section.visible {
@@ -350,13 +396,7 @@
         }
 
         .timeline::before {
-            content: '';
-            position: absolute;
-            left: 5px;
-            top: 10px;
-            bottom: 0;
-            width: 2px;
-            background: var(--timeline-line);
+            display: none;
         }
 
         .entry {
@@ -590,56 +630,73 @@
             <i class="fas fa-moon"></i>
         </button>
 
-        <img src="Shreeyash Nitin Malode.png" alt="Profile photo of Shreeyash Nitin Malode" class="profile-avatar">
-        <h1>Shreeyash Nitin Malode</h1>
-        <div class="title-roles">
-            <strong>Chapter Scientist - Intergovernmental Panel on Climate Change (IPCC)</strong><br><br>
-            Doctoral Candidate - Indian Institute of Technology Kanpur (IITK)
-            <br><br>
-            2025 Young Scientists Summer Program (YSSP) Fellow - International Institute for Applied Systems Analysis (IIASA)
+        <div class="sidebar-card sidebar-card-profile">
+            <div class="sidebar-card-title">Profile</div>
+            <img src="Shreeyash Nitin Malode.png" alt="Profile photo of Shreeyash Nitin Malode" class="profile-avatar">
+            <h1>Shreeyash Nitin Malode</h1>
+            <div class="title-roles">
+                <strong>Chapter Scientist - Intergovernmental Panel on Climate Change (IPCC)</strong><br><br>
+                Doctoral Candidate - Indian Institute of Technology Kanpur (IITK)
+                <br><br>
+                2025 Young Scientists Summer Program (YSSP) Fellow - International Institute for Applied Systems Analysis (IIASA)
+            </div>
         </div>
 
-        <div class="research-area">
-            <strong>Research Areas:</strong><br> Emissions Trading, Integrated Assessment Modeling, and Energy-Climate Policy Modeling.
+        <div class="sidebar-card">
+            <div class="sidebar-card-title">Research Focus</div>
+            <div class="research-area">
+                <strong>Research Areas:</strong><br> Emissions Trading, Integrated Assessment Modeling, and Energy-Climate Policy Modeling.
+            </div>
         </div>
 
-        <ul class="contact-list">
-            <li>
-                <i class="fas fa-envelope"></i> 
-                <span class="masked-data print-reveal" data-real="shreeyashmalode@gmail.com" onclick="revealContact(this, 'email')">
-                    <i class="fas fa-lock"></i> Click to reveal Email
-                </span>
-            </li>
-            <li>
-                <i class="fas fa-university"></i> 
-                <span class="masked-data print-reveal" data-real="shreeyashn20@iitk.ac.in" onclick="revealContact(this, 'email')">
-                    <i class="fas fa-lock"></i> Click to reveal Edu Email
-                </span>
-            </li>
-            <li>
-                <i class="fas fa-mobile-alt"></i> 
-                <span class="masked-data print-reveal" data-real="+91 9545277755" onclick="revealContact(this, 'phone')">
-                    <i class="fas fa-lock"></i> Click to reveal Phone
-                </span>
-            </li>
-            <li>
-                <i class="fas fa-map-marker-alt"></i>
-                <span>Kanpur, Uttar Pradesh, India</span>
-            </li>
-        </ul>
-
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/shreeyashmalode/" class="social-btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a>
-            <a href="https://github.com/shreeyashn20" class="social-btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
-            <a href="https://orcid.org/0000-0001-9571-0424" class="social-btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-orcid"></i> ORCID</a>
-            <a href="https://scholar.google.com/citations?user=WQcqZIoAAAAJ&hl=en" class="social-btn" target="_blank" rel="noopener noreferrer"><i class="fas fa-graduation-cap"></i> Scholar</a>
+        <div class="sidebar-card">
+            <div class="sidebar-card-title">Contact Details</div>
+            <ul class="contact-list">
+                <li>
+                    <i class="fas fa-envelope"></i> 
+                    <span class="masked-data print-reveal" data-real="shreeyashmalode@gmail.com" onclick="revealContact(this, 'email')">
+                        <i class="fas fa-lock"></i> Click to reveal Email
+                    </span>
+                </li>
+                <li>
+                    <i class="fas fa-university"></i> 
+                    <span class="masked-data print-reveal" data-real="shreeyashn20@iitk.ac.in" onclick="revealContact(this, 'email')">
+                        <i class="fas fa-lock"></i> Click to reveal Edu Email
+                    </span>
+                </li>
+                <li>
+                    <i class="fas fa-mobile-alt"></i> 
+                    <span class="masked-data print-reveal" data-real="+91 9545277755" onclick="revealContact(this, 'phone')">
+                        <i class="fas fa-lock"></i> Click to reveal Phone
+                    </span>
+                </li>
+                <li>
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Kanpur, Uttar Pradesh, India</span>
+                </li>
+            </ul>
         </div>
 
-        <a href="https://github.com/shreeyashn20/shreeyashn20/blob/main/Shreeyash_Nitin_Malode_CV_Nov_25.pdf" class="btn-primary" target="_blank" rel="noopener noreferrer">
-            <i class="fas fa-file-pdf"></i> Download PDF CV
-        </a>
-        
-        <ul class="nav-menu">
+        <div class="sidebar-card">
+            <div class="sidebar-card-title">Connect</div>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/shreeyashmalode/" class="social-btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://github.com/shreeyashn20" class="social-btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+                <a href="https://orcid.org/0000-0001-9571-0424" class="social-btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-orcid"></i> ORCID</a>
+                <a href="https://scholar.google.com/citations?user=WQcqZIoAAAAJ&hl=en" class="social-btn" target="_blank" rel="noopener noreferrer"><i class="fas fa-graduation-cap"></i> Scholar</a>
+            </div>
+        </div>
+
+        <div class="sidebar-card">
+            <div class="sidebar-card-title">Curriculum Vitae</div>
+            <a href="https://github.com/shreeyashn20/shreeyashn20/blob/main/Shreeyash_Nitin_Malode_CV_Nov_25.pdf" class="btn-primary" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-file-pdf"></i> Download PDF CV
+            </a>
+        </div>
+
+        <div class="sidebar-card">
+            <div class="sidebar-card-title">Outline</div>
+            <ul class="nav-menu">
             <li><a href="#about" class="nav-link active">About Me</a></li>
             <li><a href="#education" class="nav-link">Education</a></li>
             <li><a href="#publications" class="nav-link">Publications</a></li>
@@ -830,16 +887,18 @@
 
         <section id="teaching">
             <h2><i class="fas fa-chalkboard-teacher"></i> Teaching Assistantships</h2>
-            <div class="entry" style="padding: 20px;">
-                <p style="margin-bottom: 15px; color: var(--text-muted);">Assisted in delivering the following courses at the Department of Management Sciences, IIT Kanpur:</p>
-                <ul class="custom-list">
-                    <li><strong>MBA601:</strong> Finance and Accounting <em>(Aug 2024 – Nov 2024)</em></li>
-                    <li><strong>MBA677:</strong> Project Financing and Management <em>(Jan 2026 – May 2026 & Jan 2024 – May 2024 & Jan 2022 – May 2022)</em></li>
-                    <li><strong>MBA784:</strong> Derivatives & Risk Management for the Energy and Environmental Markets <em>(Jan 2024 – Mar 2024)</em></li>
-                    <li><strong>MBA683:</strong> Power Sector Reform and Regulation – Theory and Practice <em>(Aug 2023 – Nov 2023)</em></li>
-                    <li><strong>IME609:</strong> Energy, Environment and Climate: Economic and Policy Modelling <em>(Jan 2023 – May 2023)</em></li>
-                    <li><strong>MBA782:</strong> Renewable Energy – Economics, Policy, and Regulation <em>(Aug 2022 – Nov 2022)</em></li>
-                </ul>
+            <div class="timeline">
+                <div class="entry" style="padding: 20px;">
+                    <p style="margin-bottom: 15px; color: var(--text-muted);">Assisted in delivering the following courses at the Department of Management Sciences, IIT Kanpur:</p>
+                    <ul class="custom-list">
+                        <li><strong>MBA601:</strong> Finance and Accounting <em>(Aug 2024 – Nov 2024)</em></li>
+                        <li><strong>MBA677:</strong> Project Financing and Management <em>(Jan 2026 – May 2026 & Jan 2024 – May 2024 & Jan 2022 – May 2022)</em></li>
+                        <li><strong>MBA784:</strong> Derivatives & Risk Management for the Energy and Environmental Markets <em>(Jan 2024 – Mar 2024)</em></li>
+                        <li><strong>MBA683:</strong> Power Sector Reform and Regulation – Theory and Practice <em>(Aug 2023 – Nov 2023)</em></li>
+                        <li><strong>IME609:</strong> Energy, Environment and Climate: Economic and Policy Modelling <em>(Jan 2023 – May 2023)</em></li>
+                        <li><strong>MBA782:</strong> Renewable Energy – Economics, Policy, and Regulation <em>(Aug 2022 – Nov 2022)</em></li>
+                    </ul>
+                </div>
             </div>
         </section>
 
