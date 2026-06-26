@@ -179,7 +179,7 @@
             background: transparent;
             border-radius: 0;
             padding: 60px 80px;
-            box-shadow: none;
+            box-shadow: var(--shadow-sm);
             min-width: 0;
             transition: var(--transition);
         }
@@ -198,6 +198,24 @@
             line-height: 1.2;
         }
 
+        .gradient-text {
+            background: linear-gradient(90deg, #9e1b1e, #ff6b6b, #9e1b1e, #ff6b6b, #9e1b1e);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradient-flow 6s linear infinite;
+        }
+
+        @keyframes gradient-flow {
+            0% {
+                background-position: 0% center;
+            }
+            100% {
+                background-position: 200% center;
+            }
+        }
+
         h2 {
             font-size: 1.7rem;
             color: var(--primary-color);
@@ -208,6 +226,15 @@
             display: inline-block;
             width: 100%;
             letter-spacing: 0.5px;
+        }
+
+        .gradient-heading {
+            background: linear-gradient(90deg, #2d6a4f, #40916c, #52b788, #40916c, #2d6a4f);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradient-flow 6s linear infinite;
         }
 
         section {
@@ -406,6 +433,7 @@
             background: var(--bg-color);
             border-radius: 8px;
             border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-sm);
             transition: var(--transition);
         }
 
@@ -496,10 +524,7 @@
             line-height: 1.8;
             margin-bottom: 20px;
             color: var(--text-main);
-            background: var(--bg-color);
-            padding: 20px;
-            border-left: 4px solid var(--primary-color);
-            border-radius: 8px;
+            text-align: justify;
         }
 
         .highlight-badge {
@@ -534,6 +559,7 @@
             padding: 25px;
             border-radius: 8px;
             border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-sm);
             transition: var(--transition);
         }
 
@@ -563,6 +589,7 @@
             border: 1px solid var(--border-color);
             border-radius: 8px;
             background: var(--bg-color);
+            box-shadow: var(--shadow-sm);
             transition: var(--transition);
         }
 
@@ -633,9 +660,9 @@
         <div class="sidebar-card sidebar-card-profile">
             <div class="sidebar-card-title">Profile</div>
             <img src="Shreeyash Nitin Malode.png" alt="Profile photo of Shreeyash Nitin Malode" class="profile-avatar">
-            <h1>Shreeyash Nitin Malode</h1>
+            <h1 class="gradient-text">Shreeyash Nitin Malode</h1>
             <div class="title-roles">
-                <strong>Chapter Scientist - Intergovernmental Panel on Climate Change (IPCC)</strong><br><br>
+                Chapter Scientist - Intergovernmental Panel on Climate Change (IPCC)<br><br>
                 Doctoral Candidate - Indian Institute of Technology Kanpur (IITK)
                 <br><br>
                 2025 Young Scientists Summer Program (YSSP) Fellow - International Institute for Applied Systems Analysis (IIASA)
@@ -715,7 +742,7 @@
     <main class="main-content">
         
         <section id="about">
-            <h2><i class="fas fa-user-circle"></i> About Me</h2>
+            <h2 class="gradient-heading"><i class="fas fa-user-circle"></i> About Me</h2>
             <div class="summary-text">
                 <p>You see <strong>"Emissions Trading"</strong> and <strong>"Energy-Climate Policy Modelling"</strong> on my profile, and yeah, that's a big part of what I do. But what that really means is I'm constantly digging into data, building models (lots of love for <strong>MESSAGEix!</strong>), and trying to make sense of how we can transition to a cleaner energy future.</p>
                 <p style="margin-top: 10px;">It's not just about the numbers, though. It's about understanding the real-world implications and finding pathways that are both <em>effective</em> and <em>fair</em>.</p>
@@ -734,6 +761,18 @@
                     <p><strong>Doctor of Philosophy - PhD, Management (Energy Economics); CGPA: 7.60/10</strong></p>
                     <ul class="custom-list" style="margin-top: 10px;">
                         <li><strong>Tentative Thesis Title:</strong> Essays on Emissions Trading System for India</li>
+                    </ul>
+                </div>
+
+                <div class="entry">
+                    <div class="entry-header">
+                        <h3>Indian Institute of Technology (IIT) Kanpur, Kanpur, India</h3>
+                        <span class="entry-date">Jan 2021 – Dec 2026</span>
+                    </div>
+                    <div class="entry-subtitle">Autonomous Public Research University</div>
+                    <p><strong>Master of Technology (M.Tech.), Industrial and Management Engineering; CGPA: 7.60/10</strong></p>
+                    <ul class="custom-list" style="margin-top: 10px;">
+                        <li><strong>Thesis Title:</strong> A Multi-Scalar Indicator Framework for Assessing Net-Zero Pathways: Bridging Planetary Boundaries and Climate Policy in India</li>
                     </ul>
                 </div>
 
