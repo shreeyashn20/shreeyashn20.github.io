@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Notes from the Project and Workflow Management training session for Chapter Scientists.">
+    <title>Project and Workflow Management | Shreeyash Nitin Malode</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #9e1b1e;
+            --primary-deep: #641417;
+            --accent: #00509e;
+            --bg: #eef3f6;
+            --paper: #fff;
+            --ink: #24282d;
+            --muted: #626a73;
+            --line: #dbe2e7;
+            --soft: #f8fafb;
+            --shadow: 0 18px 45px rgba(35, 45, 55, 0.1);
+        }
+
+        [data-theme="dark"] {
+            --primary: #ef7779;
+            --primary-deep: #ff9b9d;
+            --accent: #70b7ff;
+            --bg: #0e141b;
+            --paper: #17202a;
+            --ink: #eef4f8;
+            --muted: #a8b2bc;
+            --line: #35424d;
+            --soft: #202b35;
+            --shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
+        }
+
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            margin: 0;
+            color: var(--ink);
+            background-color: var(--bg);
+            background-image: linear-gradient(135deg, rgba(158, 27, 30, 0.07) 0 1px, transparent 1px), linear-gradient(45deg, rgba(0, 80, 158, 0.06) 0 1px, transparent 1px);
+            background-size: 24px 24px;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .page { width: min(1120px, calc(100% - 36px)); margin: 0 auto; padding: 28px 0 70px; }
+        .topbar { display: flex; justify-content: space-between; align-items: center; gap: 18px; margin-bottom: 28px; }
+        .back-link, .theme-toggle { color: var(--muted); text-decoration: none; font-size: 0.9rem; font-weight: 600; }
+        .back-link:hover { color: var(--primary); }
+        .theme-toggle { border: 1px solid var(--line); background: var(--paper); padding: 9px 13px; border-radius: 6px; cursor: pointer; }
+        .theme-toggle:hover { color: var(--primary); border-color: var(--primary); }
+
+        .hero {
+            position: relative;
+            overflow: hidden;
+            background: var(--paper);
+            border-top: 7px solid var(--primary);
+            padding: clamp(30px, 6vw, 66px);
+            box-shadow: var(--shadow);
+        }
+        .hero::after {
+            content: '↗';
+            position: absolute;
+            right: 7%;
+            top: 8%;
+            color: var(--accent);
+            font-family: 'Lora', serif;
+            font-size: clamp(5rem, 13vw, 10rem);
+            line-height: 1;
+            opacity: 0.12;
+            transform: rotate(-15deg);
+        }
+        .eyebrow { color: var(--primary); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; }
+        h1, h2, h3 { font-family: 'Lora', serif; font-weight: 600; }
+        h1 { max-width: 760px; margin: 14px 0 18px; font-size: clamp(2.4rem, 6vw, 5rem); line-height: 1.08; letter-spacing: -1px; }
+        .subtitle { max-width: 760px; margin: 0; color: var(--muted); font-family: 'Lora', serif; font-size: clamp(1.05rem, 2vw, 1.35rem); font-style: italic; }
+
+        .workflow { display: grid; grid-template-columns: repeat(4, 1fr); margin: 38px 0 52px; border: 1px solid var(--line); background: var(--paper); box-shadow: var(--shadow); }
+        .workflow-step { position: relative; padding: 22px 20px; border-right: 1px solid var(--line); }
+        .workflow-step:last-child { border-right: 0; }
+        .workflow-step::after { content: '›'; position: absolute; top: 18px; right: -9px; z-index: 1; width: 18px; height: 25px; color: var(--primary); background: var(--paper); text-align: center; font-size: 1.4rem; }
+        .workflow-step:last-child::after { display: none; }
+        .step-number { color: var(--accent); font-family: 'Lora', serif; font-size: 1.8rem; }
+        .workflow-step strong { display: block; margin-top: 5px; font-size: 0.93rem; }
+
+        .notes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+        .note-card { background: var(--paper); border: 1px solid var(--line); padding: 28px; box-shadow: 0 8px 24px rgba(35, 45, 55, 0.05); }
+        .note-card.wide { grid-column: 1 / -1; }
+        .note-card h2 { display: flex; align-items: center; gap: 12px; margin: 0 0 18px; color: var(--primary); font-size: 1.45rem; line-height: 1.25; }
+        .note-card h2 i { color: var(--accent); font-size: 1.05rem; }
+        .note-card ul { margin: 0; padding-left: 22px; }
+        .note-card li { margin-bottom: 12px; padding-left: 5px; }
+        .note-card li:last-child { margin-bottom: 0; }
+        .note-card li::marker { color: var(--primary); }
+        .closing { margin-top: 42px; padding: 30px; border-left: 5px solid var(--accent); background: var(--paper); box-shadow: var(--shadow); }
+        .closing p { margin: 0; color: var(--muted); font-family: 'Lora', serif; font-size: 1.15rem; }
+
+        @media (max-width: 720px) {
+            .page { width: min(100% - 24px, 600px); padding-top: 16px; }
+            .workflow, .notes { grid-template-columns: 1fr; }
+            .workflow-step { border-right: 0; border-bottom: 1px solid var(--line); }
+            .workflow-step:last-child { border-bottom: 0; }
+            .workflow-step::after { content: '↓'; top: auto; right: 50%; bottom: -14px; }
+            .workflow-step:last-child::after { display: none; }
+            .note-card.wide { grid-column: auto; }
+            .topbar { align-items: flex-start; }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="topbar">
+            <a class="back-link" href="index.html"><i class="fas fa-arrow-left"></i> Back to profile</a>
+            <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle colour theme"><i class="fas fa-moon"></i> Theme</button>
+        </div>
+
+        <header class="hero">
+            <div class="eyebrow">Chapter Scientist Support Programme · Training Notes</div>
+            <h1>Project and Workflow Management</h1>
+            <p class="subtitle">The notes are taken as the part of training session I attended organized by UNESCO, ICTP, IAP, as a part of Chapter Scientist Support Programme.</p>
+        </header>
+
+        <div class="workflow" aria-label="Training structure">
+            <div class="workflow-step"><span class="step-number">01</span><strong>Map the workflow</strong></div>
+            <div class="workflow-step"><span class="step-number">02</span><strong>Set up the tools</strong></div>
+            <div class="workflow-step"><span class="step-number">03</span><strong>Apply them to review</strong></div>
+            <div class="workflow-step"><span class="step-number">04</span><strong>Coordinate the chapter</strong></div>
+        </div>
+
+        <main class="notes">
+            <article class="note-card">
+                <h2><i class="fas fa-chalkboard-teacher"></i> Session Snapshot</h2>
+                <ul>
+                    <li>The lecture was delivered by Dr. Shouro Dasgupta.</li>
+                    <li>There were 37 participants in the training.</li>
+                    <li>Dr. Dasgupta is also assessing EURCA-2 assessment, the Mini IPCC.</li>
+                    <li>Global Goal on Adaptation: apply the learning in future work.</li>
+                </ul>
+            </article>
+
+            <article class="note-card">
+                <h2><i class="fas fa-route"></i> Two-Part Format</h2>
+                <ul>
+                    <li>There were two sessions, with two practical sessions included.</li>
+                    <li><strong>Part I:</strong> map the workflow and help set up the tools.</li>
+                    <li><strong>Part II:</strong> apply the tools to review comments, consistency and coordination.</li>
+                    <li>Apply the tools to your own chapter and work through some of the bottlenecks.</li>
+                </ul>
+            </article>
+
+            <article class="note-card wide">
+                <h2><i class="fas fa-users-cog"></i> Why Project Management Matters</h2>
+                <ul>
+                    <li>Project management is required for managing the work done by Chapter Lead Authors (CLAs) and Lead Authors (LAs).</li>
+                    <li>Core activities include managing references, compiling sections, tracking comments and maintaining consistency in the chapter.</li>
+                    <li>The training provides a shared system for making chapter work visible, coordinated and easier to update.</li>
+                </ul>
+            </article>
+
+            <article class="note-card">
+                <h2><i class="fas fa-calendar-check"></i> Milestone Plan</h2>
+                <ul>
+                    <li>Build deadlines backward from the final delivery date.</li>
+                    <li>Use provisional dates that are clearly marked and designed to be updated as the schedule firms up.</li>
+                    <li>Use the spreadsheet file for the entire AR7 process.</li>
+                </ul>
+            </article>
+
+            <article class="note-card">
+                <h2><i class="fas fa-toolbox"></i> Resource Kit</h2>
+                <ul>
+                    <li>Review-comment tracker.</li>
+                    <li>Consistency and traceability checklist.</li>
+                    <li>Figure and data log.</li>
+                    <li>Template file for naming and coordination.</li>
+                    <li>Two files are provided for your own chapter.</li>
+                </ul>
+            </article>
+
+            <article class="note-card wide">
+                <h2><i class="fas fa-list-ol"></i> Outline of the Presentation</h2>
+                <ul>
+                    <li>Chapter Scientist role.</li>
+                    <li>AR7 cycle.</li>
+                    <li>Milestone plan.</li>
+                    <li>Core tools and hands-on practice.</li>
+                    <li>Common problems.</li>
+                    <li>Part II and questions.</li>
+                </ul>
+            </article>
+
+            <article class="note-card wide">
+                <h2><i class="fas fa-id-card"></i> The Role of the Chapter Scientist</h2>
+                <ul>
+                    <li><strong>Day-to-day work:</strong> support the author team as a whole and enable the assessment.</li>
+                    <li>Chapter Scientists do not author sections or assess literature independently; they are integral to the process.</li>
+                    <li><strong>What the role covers:</strong> referencing set, tracking and logging review comments, preparing figures, tables and data, checking consistency across sections, coordinating authors and deadlines, and compiling the master document.</li>
+                    <li><strong>Outside the role:</strong> authoring sections of the chapter, assessing the literature independently, making scientific judgements and deciding how comments are resolved.</li>
+                </ul>
+            </article>
+
+            <article class="note-card">
+                <h2><i class="fas fa-poll"></i> Common Challenges</h2>
+                <ul>
+                    <li>The poll found version control, coordinating, deadlines, review comments and workload to be the main issues faced by Chapter Scientists.</li>
+                    <li>These concerns were ranked by how often they were experienced.</li>
+                </ul>
+            </article>
+
+            <article class="note-card">
+                <h2><i class="fas fa-globe-asia"></i> Coordination Across Teams</h2>
+                <ul>
+                    <li>Coordinating is difficult because of logistics involving multiple time zones.</li>
+                    <li>Teams have different styles of working and writing.</li>
+                    <li>There are different approaches to deadlines: some people work close to the deadline, while others work well before it.</li>
+                </ul>
+            </article>
+        </main>
+
+        <div class="closing">
+            <p>Good workflow management turns many individual contributions into one coherent chapter: visible milestones, traceable decisions and a shared rhythm of coordination.</p>
+        </div>
+    </div>
+
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            themeToggle.innerHTML = '<i class="fas fa-sun"></i> Theme';
+        }
+        themeToggle.addEventListener('click', () => {
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            document.documentElement.toggleAttribute('data-theme', !isDark);
+            if (!isDark) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                themeToggle.innerHTML = '<i class="fas fa-sun"></i> Theme';
+            } else {
+                document.documentElement.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+                themeToggle.innerHTML = '<i class="fas fa-moon"></i> Theme';
+            }
+        });
+    </script>
+</body>
+</html>
