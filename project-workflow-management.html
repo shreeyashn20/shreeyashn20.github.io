@@ -99,6 +99,10 @@
         .note-card li { margin-bottom: 12px; padding-left: 5px; }
         .note-card li:last-child { margin-bottom: 0; }
         .note-card li::marker { color: var(--primary); }
+        .tracker-wrap { overflow-x: auto; }
+        .tracker { width: 100%; min-width: 980px; border-collapse: collapse; font-size: 0.82rem; line-height: 1.45; }
+        .tracker th, .tracker td { padding: 10px 9px; border: 1px solid var(--line); text-align: left; vertical-align: top; }
+        .tracker th { color: var(--primary); background: var(--soft); font-weight: 700; }
         .closing { margin-top: 42px; padding: 30px; border-left: 5px solid var(--accent); background: var(--paper); box-shadow: var(--shadow); }
         .closing p { margin: 0; color: var(--muted); font-family: 'Lora', serif; font-size: 1.15rem; }
 
@@ -311,6 +315,130 @@
                     <li>Decisions stall for days across time zones: make availability, limits, and needed decisions visible, then send reminders to CLAs and LAs.</li>
                     <li>The volume of review comments overwhelms the team after a review round: compile and track comments, assign responsibility, and follow each comment to its page and line number.</li>
                     <li>Check glossary items for consistency as part of the consistency check.</li>
+                </ul>
+            </article>
+
+            <article class="note-card wide">
+                <h2><i class="fas fa-map-signs"></i> Overview of Part I: The Planning Backbone</h2>
+                <ul>
+                    <li>Plan backward from the final deadline and maintain a milestone plan with clear deadlines.</li>
+                    <li>Set up the core tools: a shared reference library, file-naming rules, and version-control conventions.</li>
+                    <li>Archive each previous version as read-only, then do all new work in the current version.</li>
+                    <li>Part I establishes the structure needed to run the chapter workflow reliably.</li>
+                </ul>
+            </article>
+
+            <article class="note-card wide">
+                <h2><i class="fas fa-gears"></i> Overview of Part II: Running the Workflow</h2>
+                <ul>
+                    <li>Part II applies the workflow in practice through review comments, traceability, and coordination.</li>
+                    <li>Run the work in this order: reference management, review-comment handling, traceability checks, figure and data provenance, consistency checks, and coordination.</li>
+                    <li>Working asynchronously and sharing the load keeps progress moving between meetings.</li>
+                </ul>
+            </article>
+
+            <article class="note-card">
+                <h2><i class="fas fa-book-open"></i> Reference Management with Zotero</h2>
+                <ul>
+                    <li>Create a chapter account using institutional storage. Set the library and file editing permissions so every member can add references, then invite authors by email.</li>
+                    <li>Take weekly offline backups of the shared library.</li>
+                    <li>Install Zotero and the Zotero Connector. Use the shared SharePoint document for chapter writing.</li>
+                    <li>The Zotero citation workflow is unavailable in Word for the web; open the desktop version of Word to add references.</li>
+                    <li>Save references with Zotero Connector from the article page, or add an item using its DOI, ISBN, or PMID.</li>
+                    <li>For large imports, export RIS or BibTeX and import the file instead of saving references one by one.</li>
+                </ul>
+            </article>
+
+            <article class="note-card">
+                <h2><i class="fas fa-magnifying-glass"></i> Reference Metadata Checklist</h2>
+                <ul>
+                    <li>Check item type, authors, journal or publisher, publication year, title, DOI, ISBN or PMID, and the source URL.</li>
+                    <li>Capture metadata from the article itself and check grey literature manually.</li>
+                    <li>Use Google Scholar for comparison and to locate articles in institutional repositories, but check and merge duplicate entries, including duplicates created by author searches.</li>
+                    <li>Use the IPCC reference style checklist when an organization is the author. For example, verify whether an entry captured as “IPCC” should instead use “Intergovernmental Panel on Climate Change (IPCC)” as the corporate author.</li>
+                    <li>Use AI to create or refine the metadata checklist, then verify every field against the source and the applicable IPCC guidance.</li>
+                </ul>
+            </article>
+
+            <article class="note-card wide">
+                <h2><i class="fas fa-comments"></i> Handling Review Comments</h2>
+                <ul>
+                    <li>Comments and responses are published with the report, so maintain a complete log. No comment should be deleted.</li>
+                    <li>The Chapter Scientist's job is to ensure every review comment is tracked and receives a response. The TSU will also help.</li>
+                    <li>Each comment should be assigned to an author and given a disposition: accepted, rejected, taken into account, noted, or editorial.</li>
+                    <li>Review editors check that every comment has received proper consideration. Record the response and the location of any text change.</li>
+                </ul>
+                <div class="tracker-wrap">
+                    <table class="tracker">
+                        <thead>
+                            <tr><th>ID</th><th>Draft</th><th>Reviewer</th><th>Country</th><th>Section</th><th>Line</th><th>Comment</th><th>Assigned author</th><th>Disposition</th><th>Response</th><th>Text change (location)</th><th>Status</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>C-001</td><td>FOD</td><td>S. Dasgupta</td><td>Bangladesh</td><td>3.2</td><td>145</td><td>Add recent regional dataset X to the assessment.</td><td>A. Lead</td><td>Accepted</td><td>Dataset X added and assessed in 3.2.</td><td>3.2, para 4</td><td>Done</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+
+            <article class="note-card">
+                <h2><i class="fas fa-chart-line"></i> Figures, Data, and Provenance</h2>
+                <ul>
+                    <li>IPCC assesses the literature, and figures are among the most cited outputs, so producing reproducible images is essential.</li>
+                    <li>Record the figure ID, data category, data and code location, metadata, licence, archive link, and DOI.</li>
+                    <li>Check that labels are correct and legible. Archive data and code as the work progresses.</li>
+                    <li>Check calibrated confidence language for consistency across the chapter.</li>
+                </ul>
+            </article>
+
+            <article class="note-card">
+                <h2><i class="fas fa-arrows-rotate"></i> Consistency and Traceability</h2>
+                <ul>
+                    <li>Check labels, reference periods, glossary terms, citations, and line numbering across sections.</li>
+                    <li>Compile section files into one master document and verify that every paper is cited correctly.</li>
+                    <li>Bring references and figures forward before each deadline, and record decisions once they are made.</li>
+                </ul>
+            </article>
+
+            <article class="note-card wide">
+                <h2><i class="fas fa-people-arrows"></i> Working Asynchronously and Sharing the Load</h2>
+                <ul>
+                    <li>Most work happens between meetings, so agree clear norms. Set a response window, such as one working day, and write self-contained messages.</li>
+                    <li>In shared documents, use suggesting mode and tag people by name. Resolve only your own comments.</li>
+                    <li>For involved topics, record a short walk-through instead of adding another meeting.</li>
+                    <li>Rotate the meeting slot each quarter and track who took the inconvenient time last.</li>
+                    <li>Make problems visible to Coordinating Lead Authors with options rather than open questions.</li>
+                </ul>
+            </article>
+
+            <article class="note-card">
+                <h2><i class="fas fa-sliders"></i> Adapting the Tools to Your Chapter</h2>
+                <ul>
+                    <li>Fit each template to your milestones, sections, authors, and figures.</li>
+                    <li>Bring references and figures forward before each deadline, archive data and code as you go, and accept and record decisions once they are made.</li>
+                </ul>
+            </article>
+
+            <article class="note-card">
+                <h2><i class="fas fa-boxes-stacked"></i> Six-Part Resource Kit</h2>
+                <ul>
+                    <li>Milestone plan worked backward from the deadline.</li>
+                    <li>Review-comment tracker.</li>
+                    <li>Traceability and reference check.</li>
+                    <li>Figure and data provenance log.</li>
+                    <li>Cross-section consistency checklist.</li>
+                    <li>Time-zone coordination tracker.</li>
+                    <li>File-naming and version convention.</li>
+                </ul>
+            </article>
+
+            <article class="note-card wide">
+                <h2><i class="fas fa-book"></i> Key IPCC Reference Materials</h2>
+                <ul>
+                    <li><strong>Principles Governing IPCC Work and Appendix A:</strong> Procedures for preparing reports, the review process, and roles.</li>
+                    <li><strong>IPCC fact sheet on the review process:</strong> Review stages and how comments are handled.</li>
+                    <li><strong>Guidance note on calibrated language:</strong> Confidence and likelihood terms.</li>
+                    <li><strong>FAIR data guidelines and the Data Distribution Centre:</strong> Data and figure archiving.</li>
+                    <li><strong>AR7 Working Group pages and chapter outlines:</strong> Report structure and schedule.</li>
                 </ul>
             </article>
         </main>
