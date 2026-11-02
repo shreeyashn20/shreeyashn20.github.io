@@ -151,6 +151,29 @@
             margin-bottom: 0;
         }
 
+        .sidebar-card-profile .affiliation-heading {
+            margin: 0 0 12px;
+            color: var(--primary-color);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            font-style: normal;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .sidebar-card-profile .affiliation-section p {
+            margin: 0 0 12px;
+        }
+
+        .sidebar-card-profile .affiliation-section p:last-child {
+            margin-bottom: 0;
+        }
+
+        .sidebar-card-profile .affiliation-section + .affiliation-section {
+            margin-top: 20px;
+        }
+
         .sidebar-card .social-links {
             margin-bottom: 0;
         }
@@ -662,10 +685,18 @@
             <img src="Shreeyash Nitin Malode.png" alt="Profile photo of Shreeyash Nitin Malode" class="profile-avatar">
             <h1 class="gradient-text">Shreeyash Nitin Malode</h1>
             <div class="title-roles">
-                Chapter Scientist - Intergovernmental Panel on Climate Change (IPCC)<br><br>
-                Doctoral Candidate - Indian Institute of Technology Kanpur (IITK)
-                <br><br>
-                2025 Young Scientists Summer Program (YSSP) Fellow - International Institute for Applied Systems Analysis (IIASA)
+                <section class="affiliation-section">
+                    <h2 class="affiliation-heading">Current Affiliation</h2>
+                    <p>Doctoral Candidate - Indian Institute of Technology Kanpur (IITK)</p>
+                    <p>Chapter Scientist - Intergovernmental Panel on Climate Change (IPCC)</p>
+                    <p>Contributing Author - International Panel on Earth System Governance (IPESG)</p>
+                    <p>Project Co-lead (ELD) - Coupled Model Intercomparison Project (CMIP)</p>
+                    <p>Research Fellow - Earth System Governance Project (ESG)</p>
+                </section>
+                <section class="affiliation-section">
+                    <h2 class="affiliation-heading">Past Affiliation</h2>
+                    <p>2025 Young Scientists Summer Program (YSSP) Fellow - International Institute for Applied Systems Analysis (IIASA)</p>
+                </section>
             </div>
         </div>
 
