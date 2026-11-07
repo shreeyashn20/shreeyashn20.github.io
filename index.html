@@ -550,6 +550,31 @@
             text-align: justify;
         }
 
+        .read-more-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 16px;
+            border: 1px solid var(--primary-color);
+            border-radius: 6px;
+            background: var(--primary-color);
+            color: #fff;
+            font: inherit;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .read-more-button:hover {
+            background: var(--primary-hover);
+            border-color: var(--primary-hover);
+        }
+
+        .read-more-button:focus-visible {
+            outline: 3px solid var(--primary-color);
+            outline-offset: 3px;
+        }
+
         .highlight-badge {
             display: inline-block;
             background-color: var(--badge-bg);
@@ -771,6 +796,14 @@
             <div class="summary-text">
                 <p>You see <strong>"Emissions Trading"</strong> and <strong>"Energy-Climate Policy Modelling"</strong> on my profile, and yeah, that's a big part of what I do. But what that really means is I'm constantly digging into data, building models (lots of love for <strong>MESSAGEix!</strong>), and trying to make sense of how we can transition to a cleaner energy future.</p>
                 <p style="margin-top: 10px;">It's not just about the numbers, though. It's about understanding the real-world implications and finding pathways that are both <em>effective</em> and <em>fair</em>.</p>
+            </div>
+            <button class="read-more-button" id="aboutReadMore" type="button" aria-expanded="false" aria-controls="fullBiography">
+                Read More <i class="fas fa-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="summary-text" id="fullBiography" hidden>
+                <p>Shreeyash Nitin Malode is a Doctoral Candidate in the Department of Management Sciences at the Indian Institute of Technology Kanpur (IITK), India. His research, under the supervision of Prof. Anoop Singh at the Centre for Energy Regulation (CER, IITK), focuses on emissions trading, integrated assessment modelling, and energy-climate policy modelling.</p>
+                <p>Mr. Malode is currently active in global climate and sustainability assessments. He serves as a Chapter Scientist for the Seventh Assessment Report (WGIII, Chapter 10: Industry) of the Intergovernmental Panel on Climate Change (IPCC). In the Governance of Earth System Dynamics domain, he is also a Contributing Author for the International Panel on Earth System Governance (IPESG). Additionally, he is a Project Co-Lead for the Entry Level Documentation Project at the Coupled Model Intercomparison Project (CMIP). In 2025, he was a Young Scientists Summer Program (YSSP) Fellow at International Institute for Applied Systems Analysis (IIASA) in Austria, where he received the Prof. Jyoti and Kirit Parikh Fellowship. Additionally, he has utilised the MESSAGEix framework to help develop energy-climate policy models. He also has extensive experience in regulatory policy research, advocacy, science communication and outreach.</p>
+                <p>His long-term academic goal is to create just and sustainable futures through bridging the science-policy gap. As a climate scientist in the Global South, he has published research and review articles in leading international journals, including Energy for Sustainable Development, Environmental and Sustainability Indicators, and The Electricity Journal. In his research, he employs the research lens of justice &amp; allocation. In addition to these publications, he has presented his work at international forums, including the World Sufficiency PhD Days and the Annual Meetings of the Integrated Assessment Modelling Consortium (IAMC). Academically, he followed an interdisciplinary approach. Mr. Malode recently completed his Master of Technology at the Indian Institute of Technology Kanpur (2026). Prior to this, he studied Regulatory Governance at the Tata Institute of Social Sciences, Mumbai (Master of Science, 2020), and Power Engineering at the National Power Training Institute, Nagpur (Bachelor of Engineering, 2017).</p>
             </div>
         </section>
 
@@ -1181,6 +1214,18 @@
 
     document.addEventListener("DOMContentLoaded", function() {
         
+        const aboutReadMoreBtn = document.getElementById('aboutReadMore');
+        const fullBiography = document.getElementById('fullBiography');
+
+        aboutReadMoreBtn.addEventListener('click', () => {
+            const isExpanded = aboutReadMoreBtn.getAttribute('aria-expanded') === 'true';
+            aboutReadMoreBtn.setAttribute('aria-expanded', String(!isExpanded));
+            fullBiography.hidden = isExpanded;
+            aboutReadMoreBtn.innerHTML = isExpanded
+                ? 'Read More <i class="fas fa-chevron-down" aria-hidden="true"></i>'
+                : 'Read Less <i class="fas fa-chevron-up" aria-hidden="true"></i>';
+        });
+
         // 1. Dark Mode Toggle functionality
         const themeToggleBtn = document.getElementById('themeToggle');
         const currentTheme = localStorage.getItem('theme') || 'light';
